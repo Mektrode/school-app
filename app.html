@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
+                    R
+                </a>
+                <h3>
+                    Welcome
+                </h3>
+            </div>
+            <div data-role="content">
+                <h2>
+                    School App
+                </h2>
+                <div style="width: 150px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+                    <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px" />
+                </div>
+                <form action="">
+                    <div data-role="fieldcontain">
+                        <label for="textinput1">
+                            User ID
+                        </label>
+                        <input name="" id="textinput1" placeholder="Your ID number here" value="" type="number" data-mini="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput2">
+                            Password
+                        </label>
+                        <input name="" id="textinput2" placeholder="Your pssword here" value="" type="password" data-mini="true" />
+                    </div>
+                    <input type="submit" data-inline="true" data-theme="b" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!-- content="initial-scale=1.0, user-scalable=no"-->
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+
+        <!-- The jQuery mobile links-->
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+        <!--Native files-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+
+        <!-- Add your site or application content here -->
+
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
+                    R
+                </a>
+                <h3>
+                    Welcome
+                </h3>
+            </div>
+            <div data-role="content" id="contentpage1" style="background-image: 'image/backgroundimage.png';">
+                <h3 style="text-align: center;">
+                    School App
+                </h3>
+                <div style="height: 120px; position: relative;">
+
+                    <img src="img/loginpic.png" alt="image" style="max-height: 100%; display: block; margin-left: auto; margin-right: auto;" />
+                
+                </div>
+                <form action="">
+                    <div data-role="fieldcontain">
+                        <label for="textinput1">
+                            User ID
+                        </label>
+                        <input name="" id="textinput1" placeholder="Your ID number here" value="" type="number" data-mini="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput2">
+                            Password
+                        </label>
+                        <input name="" id="textinput2" placeholder="Your password here" value="" type="password" data-mini="true" />
+                    </div>
+                    <center>
+                    <input type="submit" data-inline="true" data-theme="a" value="Submit" />
+                    </center>
+                </form>
+            </div>
+        </div>
+
+
+        <!--Script Link files here(add the script js file to list here)-->
+        <script src="js/vendor/zepto.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/script.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g,s)}(document,"script"));
+        </script>
+    </body>
+</html>
