@@ -1,4 +1,3 @@
-<script>
 //Declare Varibales
 
 //Starting Logic
@@ -86,6 +85,3 @@ else {
 // Store this JSON in local drive for future reference
 
 //Mybe make an object aswell as JSON in local drive and compare if data is both the same as validication!
-
-
-</script>
