@@ -43,10 +43,11 @@
     </head>
     <body>
 
-        <!-- Add your site or application content here -->
+        <!-- Site/application content -->
 
-        <!-- Home -->
-        <div data-role="page" id="page1">
+        <!-- Login Page -->
+        <div data-role="page" id="login">
+
             <div data-theme="a" data-role="header" data-position="fixed">
                 <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
                     R
@@ -55,33 +56,66 @@
                     Welcome
                 </h3>
             </div>
+
             <div data-role="content" id="contentpage1" style="background-image: 'image/backgroundimage.png';">
+
                 <h3 style="text-align: center;">
                     School App
                 </h3>
                 <div style="height: 120px; position: relative;">
-
                     <img src="img/loginpic.png" alt="image" style="max-height: 100%; display: block; margin-left: auto; margin-right: auto;" />
-                
                 </div>
-                <form action="">
+
+                <form action="" name="login">
+
                     <div data-role="fieldcontain">
                         <label for="textinput1">
                             User ID
                         </label>
-                        <input name="" id="textinput1" placeholder="Your ID here" value="" type="text" data-mini="true" />
+                        <input name="userID" id="textinput1" placeholder="Your ID here" value="" type="text" data-mini="true" />
                     </div>
+
                     <div data-role="fieldcontain">
                         <label for="textinput2">
                             Password
                         </label>
-                        <input name="" id="textinput2" placeholder="Your password here" value="" type="password" data-mini="true" />
+                        <input name="pass" id="textinput2" placeholder="Your password here" value="" type="password" data-mini="true" />
                     </div>
+
                     <center>
-                    <input type="submit" data-inline="true" data-theme="a" value="Submit" />
+                    <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
+
             </div>
+
+        </div>
+
+        <!--Home Page-->
+        <div data-role="page" id="Home">
+
+            <div data-theme="c" data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#Home" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
+                    R
+                </a>
+                <h3>
+                    Home
+                </h3>
+                
+                <a data-role="button" data-direction="reverse" href="#Home" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
+                    R
+                </a>
+            </div>
+
+            <div data-role="content" id="contenthome">
+
+                <div>
+
+
+                </div>
+
+            </div>
+
         </div>
 
 
