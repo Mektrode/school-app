@@ -1,44 +1,45 @@
-
-
 function login(){
+	var process = new XMLHttpRequest();
+
 	var user = document.login.userID.value;
 	var pass = document.login.pass.value;
 
-	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "http://my php server here", user, pass, false);
+	var details = "username="+user+"&password="+pass;
+
+	//Server Address
+	var url = "localhost://phpTest/POST.php";
+
 	
-	// Add your code below!
-	xhr.send();
+	process.open("POST", url, true);
+	
+	process.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-	    this.http.open("get", this.action, false, username, password);
-	    this.http.send("");
-	    if (http.status == 200) {
-	        document.location = this.action;
-	    } else {
-	        alert("Incorrect username and/or password.");
-	    }
+	process.onreadystatechange = function () {
 
+		if (process.readyState === 4 && process.status === 200){
+			var response = process.responseText;
+			alert("It Works!!!!!!")
+		}
 
-	if () {
-		//load home page
+		else if (process.status === 0 || process.readyState === 0) {
+			alert ("Problem connecting to server!")
+		};
 
+		else {
+			errorPass(process.status);
+		}
 	}
-	else if (xhr.status === 0){
-		//error logging in!
-		errorPass();
-	}
 
-	console.log (xhr.status);
-	console.log (xhr.statusText);
+	// Send it off!
+	process.send(details);
 }
 
 
-// Http request post
-
+//console.log (process.status);
+//console.log (process.statusText);	    
 
 
 // if error happens, ask user to retype 
-function errorPass (){
+function errorPass (error){
 	//alert popup box!
-	alert("Wrong UserID or Password!");
-}
+	alert("Wrong UserID or Password! or " + error);
