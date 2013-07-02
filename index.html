@@ -49,9 +49,7 @@
         <div data-role="page" id="login">
 
             <div data-theme="a" data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
-                    R
-                </a>
+                <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
                 <h3>
                     Welcome
                 </h3>
@@ -83,67 +81,130 @@
                     </div>
 
                     <center>
+                        <p><a href="#home">Next</a></p>
                     <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
-
+            
             </div>
 
         </div>
 
-        <!--Home Page-->
-        <div data-role="page" id="Home">
 
-            <div data-theme="c" data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#Home" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
-                    R
+        <!--Home Page-->
+        <div data-role="page" id="home">
+
+            <div data-theme="b" data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#login" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
                 </a>
                 <h3>
                     Home
                 </h3>
                 
-                <a data-role="button" data-direction="reverse" href="#Home" data-icon="refresh" data-iconpos="left" class="ui-btn-right">
-                    R
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
                 </a>
             </div>
 
+
             <div data-role="content" id="contenthome">
-
                 <div>
+                    <center>
+                        <h3>Welcome Mohammed Hussein!</h3>
+                        <a href="#profile" data-role="button" data-icon="info">Profile</a>
+                        <a href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="a" data-inline="true" value="Wanna see a popup?!"/> </a>
+                    </center>
 
-
+                    <div data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li>
+                                <a href="#profile" data-transition="fade" data-theme="" data-icon="grid">
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#settings" data-transition="fade" data-theme="" data-icon="gear">
+                                    Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
 
+        </div>
+
+
+        <!--Popup box!-->
+        <div data-role="page" id="popup">
+
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    POP!
+                </h3>
+            </div>
+
+            <div data-role="content" >
+                <p>So, this is my first dialog ever made. Under is a link below back to where u cam from B****!</p>
+                <a href="#Home"><input/></a>
             </div>
 
         </div>
 
         <!--Profile Page-->
-        <div data-role="page" id="Profile">
+        <div data-role="page" id="profile">
 
-            <div data-theme="c" data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#Home" data-icon="refresh" data-iconpos="right" class="ui-btn-right">
-                    R
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
                 </a>
-                <h3>
-                    My Profile
-                </h3>
-                
-                <a data-role="button" data-direction="reverse" href="#Home" data-icon="back" data-iconpos="left" class="ui-btn-left">
-                    R
+
+                <h3>Profile</h3>
+
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
                 </a>
             </div>
 
-            <div data-role="content" id="contenthome">
-
-                <div>
-
-
-                </div>
+            <div data-role="content">
 
             </div>
 
         </div>
+
+        <!--Notes System(Popup)-->
+        <div data-role="page" id="notes">
+
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    Just Notes.
+                </h3>
+            </div>
+
+            <div data-role="content" >
+                <!--List view here-->
+                <p>Make Notes here...</p>
+                <input name="newnote" id="newnote" placeholder="Type your note here" value="" type="text" data-mini="true"/>
+                <input type="submit" onclick="submitNote()" data-inline="true" data-theme="a" value="Submit"/>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--Notes-->
+        <!--Make new help system with small swatches pointing to objects and saying what they are. the fade in out and only appear on first use
+
+            dsfsdf-->
+
 
 
         <!--Script Link files here(add the script js file to list here)-->
