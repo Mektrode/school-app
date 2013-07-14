@@ -36,9 +36,9 @@
         <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
         <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
-        <!--Theme--><!--
+        <!--Theme-->
         <link rel="stylesheet" href="theme1/themes/brown.min.css" />
-        -->
+
         <!--Native files-->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -50,7 +50,7 @@
         <!-- Site/application content -->
 
         <!-- Login Page -->
-        <div data-role="page" id="login">
+        <div data-role="page" id="login" data-theme="a">
 
             <div data-theme="a" data-role="header" data-position="fixed">
                 <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
@@ -59,7 +59,7 @@
                 </h3>
             </div>
 
-            <div data-role="content" id="contentpage1">
+            <div data-role="content" id="contentpage1" data-theme="a">
 
                 <h3 style="text-align: center;">
                     School App
@@ -68,9 +68,9 @@
                     <img src="img/loginpic.png" alt="image" style="max-height: 100%; display: block; margin-left: auto; margin-right: auto;" />
                 </div>
 
-                <form action="" name="login">
+                <form action="" name="login" data-theme="a">
 
-                    <div data-role="fieldcontain">
+                    <div data-role="fieldcontain" data-theme="a">
                         <label for="textinput1">
                             User ID
                         </label>
@@ -85,8 +85,8 @@
                     </div>
 
                     <center>
-                        <p><a href="#home">Next</a></p>
-                        <p><a href="index2.html">Change Theme</a></p>
+                        <p><a href="#home" data-theme="a">Next</a></p>
+                        <a href="index.html" data-role="button" data-icon="info" data-theme="a">Back to Original</a>
                     <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
@@ -97,60 +97,30 @@
 
 
         <!--Home Page-->
-        <div data-role="page" id="home">
-<!--
-<a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
--->
-
-            <div data-role="panel" id="notification">
-                <div data-theme="a" data-role="header" data-position="fixed">
-                    <h3>
-                        Notfications
-                    </h3>
-                </div>
-
-                <h2>Header</h2>
-                <p>First bit of text...</p>
-                <hr>
-
-                <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-            </div>
-
-            <div data-role="page" id="demo-page" data-theme="d" data-url="demo-page">
-                <div data-role="header" data-theme="b">
-                    <h1>Swipe left or right</h1>
-                    <a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
-                <div data-role="panel" id="left-panel" data-theme="b">
-                    <p>Left reveal panel.</p>
-                    <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-                </div>
-            </div>
-
-
-
+        <div data-role="page" id="home" data-theme="a">
 
             <div data-theme="b" data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#login" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                <a data-role="button" data-direction="reverse" href="#login" data-theme="a" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
                 <h3>
                     Home
                 </h3>
                 
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right" data-theme="a">
                     Notes
                 </a>
             </div>
 
 
-            <div data-role="content" id="contenthome">
+            <div data-role="content" id="contenthome" data-theme="a">
                 <div>
                     <center>
                         <h3>Welcome Mohammed Hussein!</h3>
                         
                         <a href="#profile" data-role="button" data-icon="info">Profile</a>
                         <a href="#timetable" data-role="button" data-icon="info"data-theme="b">Timetable</a>
-                        <a href="#notifications" data-role="button" data-icon="info"data-theme="d">Notifications</a>
+                        <a href="#profile" data-role="button" data-icon="info"data-theme="d">Three</a>
                         <a href="#profile" data-role="button" data-icon="info"data-theme="e">Four</a>
                         <a href="#profile" data-role="button" data-icon="info"data-theme="c">Five</a>
 
