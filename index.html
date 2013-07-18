@@ -71,14 +71,14 @@
                 <form action="" name="login">
 
                     <div data-role="fieldcontain">
-                        <label for="textinput1">
+                        <label for="username">
                             User ID
                         </label>
                         <input name="userID" id="textinput1" placeholder="Your ID here" value="" type="text" data-mini="true" />
                     </div>
 
                     <div data-role="fieldcontain">
-                        <label for="textinput2">
+                        <label for="password">
                             Password
                         </label>
                         <input name="pass" id="textinput2" placeholder="Your password here" value="" type="password" data-mini="true" />
@@ -87,7 +87,7 @@
                     <center>
                         <p><a href="#home">Next</a></p>
                         <p><a href="index2.html">Change Theme</a></p>
-                    <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
+                        <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
             
@@ -101,36 +101,10 @@
 <!--
 <a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
 -->
-
-            <div data-role="panel" id="notification">
-                <div data-theme="a" data-role="header" data-position="fixed">
-                    <h3>
-                        Notfications
-                    </h3>
-                </div>
-
-                <h2>Header</h2>
-                <p>First bit of text...</p>
-                <hr>
-
-                <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-            </div>
-
-            <div data-role="page" id="demo-page" data-theme="d" data-url="demo-page">
-                <div data-role="header" data-theme="b">
-                    <h1>Swipe left or right</h1>
-                    <a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
-                <div data-role="panel" id="left-panel" data-theme="b">
-                    <p>Left reveal panel.</p>
-                    <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-                </div>
-            </div>
-
-
-
-
+            
             <div data-theme="b" data-role="header" data-position="fixed">
                 <a data-role="button" data-direction="reverse" href="#login" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    <!--data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc"-->
                     Back
                 </a>
                 <h3>
@@ -144,15 +118,16 @@
 
 
             <div data-role="content" id="contenthome">
-                <div>
                     <center>
                         <h3>Welcome Mohammed Hussein!</h3>
                         
                         <a href="#profile" data-role="button" data-icon="info">Profile</a>
                         <a href="#timetable" data-role="button" data-icon="info"data-theme="b">Timetable</a>
                         <a href="#notifications" data-role="button" data-icon="info"data-theme="d">Notifications</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="e">Four</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="c">Five</a>
+                        <a href="#exam_dates" data-role="button" data-icon="info"data-theme="e">Exam Dates</a>
+                        <a href="#progress_review" data-role="button" data-icon="info"data-theme="c">Progress Review</a>
+
+                        <a data-role="button" href="#notification" data-theme="d" data-icon="arrow-r">Open left panel</a>
 
                         <a href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="a" data-inline="true" value="Wanna see a popup?!"/> </a>
                     </center>
@@ -177,6 +152,21 @@
                             </li>
                         </ul>
                     </div>
+            </div>
+
+            <!--Left Notifications Panel-->
+
+            <div data-role="panel" data-theme="a" id="notification" data-position="left">
+                <div data-theme="a" data-role="header" data-position="fixed">
+                    <h3>
+                        Notfications
+                    </h3>
+                </div>
+                <div data-role="content">
+                    <h2>Header</h2>
+                    <p>First bit of text...</p>
+                    <hr>
+                    <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
                 </div>
             </div>
 
@@ -217,6 +207,7 @@
 
             <div data-role="content">
 
+                <!--Grid system to increase responsivity-->
                 <div data-role="grid">
                     <div style="height: 120px; position: relative;">
                         <img src="img/loginpic.png" alt="image" style="max-height: 100%; display: block; margin-left: 10%; float:left;" />
@@ -304,45 +295,91 @@
 
         </div>
 
-        
+        <!--Progress Review-->
+
+        <div data-role="page" id="progress_review">
+
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+                <h3>Progress Review</h3>
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-role="content">
+
+                <!--Buttons-->
+
+                <!--Table-->
+
+
+                <!--Graph It-->
+                <center>
+                    <a href="#graph" data="button">Graph It!</a>
+                </center>
+
+            </div>
+
+        </div>
+
+
+        <!--Exam Dates-->
+
+        <div data-role="page" id="exam_dates">
+
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>Exams</h3>
+
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-role="content">
+                <nav>
+                    <ul>
+                        <li>English</li>
+                            <!--Dropdown menu-->
+                            <p>Type:- <span id=""></span></p>
+                            <p>Date:- <span id=""></span></p>
+                            <p>Duration:- <span id=""></span></p>
+                            <p>Predicted Grade:- <span id=""></span></p>
+                            <p>Last Mock:- <span id=""></span></p>
+                            <!--/Dropdown Menu-->
+                        <li>Maths</li>
+
+                        <li>Science
+                            <ul>
+                                <li>C1</li>
+                                <li>P1</li>
+                                <li>B1</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
 
 
         <!--Template Blank-->
 
-        <div data-role="page" id="p_review">
+        <div data-role="page" id="??????">
 
             <div data-role="header" data-position="fixed">
                 <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
-                <h3>Progress REview</h3>
-
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
-                    Notes
-                </a>
-            </div>
-
-            <div data-role="content">
-
-
-            </div>
-
-        </div>
-
-
-
-
-        <!--Progress Review-->
-
-        <div data-role="page" id="p_review">
-
-            <div data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
-                    Back
-                </a>
-
-                <h3>Progress REview</h3>
+                <h3>Title</h3>
 
                 <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
@@ -360,15 +397,27 @@
 
 
 
-        <!--Left Panel on all pages-->
 
 
 
 
 
+        <!--Login Error (Popup)-Try making this popup red in theme. -->
+        <div data-role="page" id="error">
 
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    Oops! Something went wrong.
+                </h3>
+            </div>
 
+            <div data-role="content" >
+                <!--List view here-->
+                <p>Hummm.... Either your Username or Password was wrong.</p>
+                <!--Error Image LOL--><center><img src="oops.jpg"></center>
+            </div>
 
+        </div>
 
 
         <!--Notes System(Popup)-->
@@ -391,10 +440,9 @@
 
 
 
+        <!--TODO!-->
+        <!--Help!: Make new help system with small swatches pointing to objects and saying what they are. the fade in out and only appear on first use
 
-
-        <!--Notes-->
-        <!--Make new help system with small swatches pointing to objects and saying what they are. the fade in out and only appear on first use
 
             dsfsdf-->
 
