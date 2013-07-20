@@ -127,7 +127,8 @@
                         <a href="#exam_dates" data-role="button" data-icon="info"data-theme="e">Exam Dates</a>
                         <a href="#progress_review" data-role="button" data-icon="info"data-theme="c">Progress Review</a>
 
-                        <a data-role="button" href="#notification" data-theme="d" data-icon="arrow-r">Open left panel</a>
+                        <a data-role="button" href="#notification" data-theme="d" data-icon="info">Open left panel</a>
+                        <a data-role="button" href="#right-panel" data-theme="b" data-icon="info">Open right panel</a>
 
                         <a href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="a" data-inline="true" value="Wanna see a popup?!"/> </a>
                     </center>
@@ -157,18 +158,17 @@
             <!--Left Notifications Panel-->
 
             <div data-role="panel" data-theme="a" id="notification" data-position="left">
-                <div data-theme="a" data-role="header" data-position="fixed">
-                    <h3>
-                        Notfications
-                    </h3>
-                </div>
-                <div data-role="content">
                     <h2>Header</h2>
                     <p>First bit of text...</p>
                     <hr>
                     <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-                </div>
             </div>
+
+
+            <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
+                <p>Right push panel.</p>
+                <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
+            </div><!-- /panel -->
 
         </div>
 
@@ -219,7 +219,7 @@
                     </div>
                     <p>House Group: <span id="hgroup">The Sharks</span></p><br>
                 </div>
-
+                <p>Your school email: <span id="school_email">hussm209.988@lgfl.com</span></p>
             </div>
 
         </div>
@@ -343,27 +343,36 @@
             </div>
 
             <div data-role="content">
-                <nav>
-                    <ul>
-                        <li>English</li>
-                            <!--Dropdown menu-->
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+                    <h3>English</h3>
+                    <!--Dropdown menu-->
                             <p>Type:- <span id=""></span></p>
                             <p>Date:- <span id=""></span></p>
                             <p>Duration:- <span id=""></span></p>
                             <p>Predicted Grade:- <span id=""></span></p>
                             <p>Last Mock:- <span id=""></span></p>
-                            <!--/Dropdown Menu-->
-                        <li>Maths</li>
+                    <!--/Dropdown Menu-->
+                </div><!-- /collapsible -->
 
-                        <li>Science
-                            <ul>
-                                <li>C1</li>
-                                <li>P1</li>
-                                <li>B1</li>
-                            </ul>
-                        </li>
+                <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+                    <h3>Maths</h3>
+                    <p>Type:- <span id=""></span></p>
+                            <p>Date:- <span id=""></span></p>
+                            <p>Duration:- <span id=""></span></p>
+                            <p>Predicted Grade:- <span id=""></span></p>
+                            <p>Last Mock:- <span id=""></span></p>
+                </div><!-- /collapsible -->
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+                    <h3>Science</h3>
+                    <ul data-role="listview">
+                        <li><a href="#">C1</a></li>
+                        <li><a href="#">B2</a></li>
+                        <li><a href="#">P3</a></li>
+                        <li><a href="#">B1</a></li>
                     </ul>
-                </nav>
+                </div><!-- /collapsible -->
             </div>
 
         </div>

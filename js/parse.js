@@ -8,98 +8,18 @@ Parse.initialize("cF1KaOFNgSERAxKgv4ZUDE3XBnMEpGxF2ACWmMZE", "tnNd8KSP42GsJ9ZyBV
 
 
 
-// Log In & Sign Up
-function signUp() {
-	// Get values
-	var $username = $("#name-signup"),
-	    $password = $("#psword-signup"),
-	    $password2 = $("#psword2-signup"),
-	    $email = $("#email-signup");
-	    
-	var username = $username.val(),
-	    password = $password.val(),
-	    password2 = $password2.val(),
-	    email = $email.val();
-	
-	// Remove styling
-	$username.parent().parent().removeClass("error");
-	$password.parent().parent().removeClass("error");
-	$password2.parent().parent().removeClass("error");
-	$email.parent().parent().removeClass("error");
-	$username.parent().children().eq(1).text("");
-	$password.parent().children().eq(1).text("");
-	$password2.parent().children().eq(1).text("");
-	$email.parent().children().eq(1).text("");
-	
-	// Validate
-	if (username.length == 0) {
-		$username.parent().parent().addClass("error");
-		return false;
-	}
-	else if (password.length < 7) {
-			$password.parent().parent().addClass("error");
-			$password.parent().children().eq(1).text("Password must be at least 7 characters!");
-			return false;
-	}
-	else if (email.length == 0) {
-			$email.parent().parent().addClass("error");
-			return false;
-	}
-	else if (password != password2) {
-		$password.parent().parent().addClass("error");
-		$password2.parent().parent().addClass("error");
-		$password.parent().children().eq(1).text("Passwords don't match!");
-		return false;
-	}
-	
-	// Sign up user
-	var user = new Parse.User();
-	user.set("username", username);
-	user.set("password", password);
-	user.set("email", email);
-	user.set("level", 1);
-
-	user.signUp(null, {
-		success: function(user) {
-			// Login user
-			Parse.User.logIn(username, password, {
-				success: function(user) {
-					buildMenu();
-				},
-				error: function(user, error) {
-					alert("Error: " + error.code + " " + error.message);
-					return false;
-				}
-			});
-			
-			// Hide modal
-			$("#signup").modal("hide");
-			
-			// Show menu
-			$("#login-menu-link").dropdown('toggle');
-		},
-		error: function(user, error) {
-			if (error.code == 202) {
-				$username.parent().parent().addClass("error");
-				$username.parent().children().eq(1).text("Username taken!");
-				return false;
-			}
-			else {
-				alert("Error: " + error.code + " " + error.message);
-				return false;
-			}
-		}
-	});
-}
+// Log In
 
 function logIn() {
 	// Get values
-	var $username = $("#name-login"),
-	    $password = $("#psword-login");
+	var $username = $("#userID"),
+	    $password = $("#pass");
+
 	    
 	var username = $username.val(),
-	    password = $password.val();
-	
+	    password = $password.val(),
+		loginpage = $("#login");
+
 	// Remove styling
 	$username.parent().parent().removeClass("error");
 	$password.parent().parent().removeClass("error");
@@ -118,8 +38,13 @@ function logIn() {
 	
 	Parse.User.logIn(username, password, {
 		success: function(user) {
-			buildMenu();
-			
+
+			//build App
+			buildHome();
+			buildProfile();
+			buildTimetable();
+			buildAnythingelse();
+
 			// Hide modal
 			$("#login").modal("hide");
 
@@ -129,7 +54,6 @@ function logIn() {
 		error: function(user, error) {
 			if (error.code == 101) {
 				$username.parent().parent().addClass("error");
-				$password.parent().parent().addClass("error");
 				return false;
 			}
 			else {
