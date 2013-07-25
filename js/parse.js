@@ -64,9 +64,35 @@ function logIn() {
 	});
 }
 
+
+var LogInView = Parse.View.extend({
+    
+
+    logIn: function(e) {
+      var self = this;
+      var username = this.$("#login-username").val();
+      var password = this.$("#login-password").val();
+      
+      Parse.User.logIn(username, password, {
+        success: function(user) {
+          new ManageTodosView();
+          self.undelegateEvents();
+          delete self;
+        },
+
+        error: function(user, error) {
+          self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
+          this.$(".login-form button").removeAttr("disabled");
+        }
+      });
+
+      return false;
+    },
+});
+
 function logOut() {
 	Parse.User.logOut();
-	window.location.href = 'index.html';
+	window.location.href = 'index.html#login';
 	buildMenu();
 }
 
