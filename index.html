@@ -44,6 +44,9 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+        
+        <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+
     </head>
     <body>
 
@@ -119,7 +122,7 @@
 
             <div data-role="content" id="contenthome">
                     <center>
-                        <h3>Welcome Mohammed Hussein!</h3>
+                        <h3>Welcome <span id="userSpan"></span>!</h3>
                         
                         <a href="#profile" data-role="button" data-icon="info">Profile</a>
                         <a href="#timetable" data-role="button" data-icon="info"data-theme="b">Timetable</a>
@@ -130,7 +133,6 @@
                         <a data-role="button" href="#notification" data-theme="d" data-icon="info">Open left panel</a>
                         <a data-role="button" href="#right-panel" data-theme="b" data-icon="info">Open right panel</a>
 
-                        <a href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="a" data-inline="true" value="Wanna see a popup?!"/> </a>
                     </center>
 
 
@@ -169,23 +171,6 @@
                 <p>Right push panel.</p>
                 <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
             </div><!-- /panel -->
-
-        </div>
-
-
-        <!--Popup box!-->
-        <div data-role="page" id="popup">
-
-            <div data-theme="a" data-role="header" data-position="fixed">
-                <h3>
-                    POP!
-                </h3>
-            </div>
-
-            <div data-role="content" >
-                <p>So, this is my first dialog ever made. Under is a link below back to where u cam from B****!</p>
-                <a href="#Home"><input/></a>
-            </div>
 
         </div>
 
@@ -242,6 +227,8 @@
             </div>
 
             <div data-role="content">
+                
+                <center><h2>Your Timetable</h2></center>
 
                 <div data-role="controlgroup" id="my-controlgroup"><!-- items will be injected here --></div>
 
@@ -460,8 +447,13 @@
         <!--Script Link files here(add the script js file to list here)-->
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/auth.js"></script>
+
+        <!--<script src="js/script.js"></script>
+        <script src="js/auth.js"></script> too many bugs and not needed-->
+
+        <script src="js/main.js"></script>
+        <script src="js/parse.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

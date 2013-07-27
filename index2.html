@@ -37,7 +37,7 @@
         <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
         <!--Theme-->
-        <link rel="stylesheet" href="theme1/themes/brown.min.css" />
+        <!--<link rel="stylesheet" href="theme1/themes/brown.min.css" />-->
 
         <!--Native files-->
         <link rel="stylesheet" href="css/normalize.css">
@@ -50,7 +50,7 @@
         <!-- Site/application content -->
 
         <!-- Login Page -->
-        <div data-role="page" id="login" data-theme="a">
+        <div data-role="page" id="login" >
 
             <div data-theme="a" data-role="header" data-position="fixed">
                 <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
@@ -85,7 +85,8 @@
                     </div>
 
                     <center>
-                        <p><a href="#home" data-theme="a">Next</a></p>
+                        <p><a href="/index2.html#homea" data-theme="a">Next</a></p> <!--Bug HERE-->
+
                         <a href="index.html" data-role="button" data-icon="info" data-theme="a">Back to Original</a>
                     <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
@@ -97,9 +98,9 @@
 
 
         <!--Home Page-->
-        <div data-role="page" id="home" data-theme="a">
+        <div data-role="page" id="homea" data-theme="a">
 
-            <div data-theme="b" data-role="header" data-position="fixed">
+            <div data-role="header" data-position="fixed"  data-theme="a">
                 <a data-role="button" data-direction="reverse" href="#login" data-theme="a" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
@@ -118,17 +119,17 @@
                     <center>
                         <h3>Welcome Mohammed Hussein!</h3>
                         
-                        <a href="#profile" data-role="button" data-icon="info">Profile</a>
-                        <a href="#timetable" data-role="button" data-icon="info"data-theme="b">Timetable</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="d">Three</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="e">Four</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="c">Five</a>
+                        <a href="#profile" data-role="button" data-icon="info" data-theme="a">Profile</a>
+                        <a href="#timetable" data-role="button" data-icon="info"data-theme="a">Timetable</a>
+                        <a href="#profile" data-role="button" data-icon="info"data-theme="a">Three</a>
+                        <a href="#profile" data-role="button" data-icon="info"data-theme="a">Four</a>
+                        <a href="#profile" data-role="button" data-icon="info"data-theme="a">Five</a>
 
                         <a href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="a" data-inline="true" value="Wanna see a popup?!"/> </a>
                     </center>
 
 
-                    <div data-role="navbar" data-iconpos="top">
+                    <div data-role="navbar" data-iconpos="top"  data-theme="a">
                         <ul>
                             <li>
                                 <a href="#timetable" data-transition="fade" data-theme="a" data-icon="star">
@@ -136,12 +137,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#profile" data-transition="fade" data-theme="b" data-icon="grid">
+                                <a href="#profile" data-transition="fade" data-theme="a" data-icon="grid">
                                     Profile
                                 </a>
                             </li>
                             <li>
-                                <a href="#settings" data-transition="fade" data-theme="c" data-icon="gear">
+                                <a href="#settings" data-transition="fade" data-theme="a" data-icon="gear">
                                     Settings
                                 </a>
                             </li>
