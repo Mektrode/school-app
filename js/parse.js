@@ -7,8 +7,9 @@
 Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56WYXSPLp1ghBBYPlf6jXhP9");
 
 
-//testing if it worked
+//Works
 
+ /*
 var TestObject = Parse.Object.extend("TestObject");
 var testObject = new TestObject();
 testObject.save({foo: "bar"}, {
@@ -16,7 +17,7 @@ testObject.save({foo: "bar"}, {
     alert("yay! it worked");
   }
 });
-
+*/
 
 /*
 // Log In

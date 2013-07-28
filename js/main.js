@@ -43,7 +43,7 @@ var id_64 = {
     ]
 }
 
-alert(id_64.age);
+console.log(id_64.age);
 
 
 //Changing themes
