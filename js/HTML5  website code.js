@@ -364,7 +364,7 @@ function post() {
 		},
 		error: function(message, error) {
 			alert("Error: " + error.code + " " + error.message);
-		}
+		};
 	});
 }
 

@@ -129,7 +129,27 @@ dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px
 
 
 
+/*MY STUFF AFTER SHIIIIT*/
 
+#small_left {
+    font-size: 50%;
+    text-align: left;
+}
+
+#small_right {
+    font-size: 50%;
+    text-align: right;
+    float: right;
+}
+
+td > #week_a{
+    border: collapse;
+    text-transform: rotate 270degress;
+}
+
+#day {
+    text-align: center;
+}
 
 
 

@@ -72,25 +72,25 @@
                 </div>
 
                 <form action="" name="login">
-
+                    <center>
                     <div data-role="fieldcontain">
                         <label for="username">
                             User ID
                         </label>
-                        <input name="userID" id="textinput1" placeholder="Your ID here" value="" type="text" data-mini="true" />
+                        <input name="userID" id="userID" placeholder="Your ID here" value="" type="text" data-mini="true" />
                     </div>
 
                     <div data-role="fieldcontain">
                         <label for="password">
                             Password
                         </label>
-                        <input name="pass" id="textinput2" placeholder="Your password here" value="" type="password" data-mini="true" />
+                        <input name="pass" id="pass" placeholder="Your password here" value="" type="password" data-mini="true" />
                     </div>
 
-                    <center>
+                    
                         <p><a href="#home">Next</a></p>
                         <p><a href="index2.html">Change Theme</a></p>
-                        <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
+                        <input type="submit" onclick="logIn()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
             
@@ -228,49 +228,49 @@
 
             <div data-role="content">
                 
-                <center><h2>Your Timetable</h2></center>
+                <center><h2><span id="userSpan"></span>'s Timetable</h2></center>
 
                 <div data-role="controlgroup" id="my-controlgroup"><!-- items will be injected here --></div>
 
                 <table id="timetable">
 
                     <tr>
-                        <td>Week A</td>
-                        <td>Monday</td>
-                        <td>Tuesday</td>
-                        <td>Wednesday</td>
-                        <td>Thursday</td>
-                        <td>Friday</td>
+                        <td id="week_a">Week A</td>
+                        <td id="day">Monday</td>
+                        <td id="day">Tuesday</td>
+                        <td id="day">Wednesday</td>
+                        <td id="day">Thursday</td>
+                        <td id="day">Friday</td>
                     </tr>
 
 
                     <tr>
-                        <td></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
+                        <td id="week_a"></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 1 day 1-->
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
                     </tr>
 
 
                     <tr>
-                        <td></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
+                        <td id="week_a"></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 2 day 1-->
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
                     </tr>
 
 
                     <tr>
-                        <td></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_left">Rm 2.29</span></td>
+                        <td id="week_a"></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 3 day 1-->
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
                     </tr>
 
                 </table>

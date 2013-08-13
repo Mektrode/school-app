@@ -15,40 +15,21 @@ $( document ).on( "pageinit", "#home", function() {
     });
 });
 
-
-//mock json file
-
-var id_64 = {
-    "firstName": "John",
-    "lastName": "Smith",
-    "age": 25,
-    "yearGroup" : "11",
-    "tutorGroup" : "Wonder",
-
-    "address": {
-        "streetAddress": "21 2nd Street",
-        "city": "New York",
-        "state": "NY",
-        "postalCode": 10021
-    },
-    "phoneNumbers": [
-        {
-            "type": "home",
-            "number": "212 555-1234"
-        },
-        {
-            "type": "fax",
-            "number": "646 555-4567"
-        }
-    ]
-}
-
-console.log(id_64.age);
-
-
 //Changing themes
 
 //black 
 /*
 $blackTheme = $("data-theme = a")
 $black.append*/
+
+
+//NOTES SYSTEM!!!!
+
+var note;
+
+
+function submitNote () {
+    var new_note = ;
+
+    //use advanced methods to add notes like in trolley list in cc
+}
