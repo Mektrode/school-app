@@ -1,5 +1,5 @@
 
-
+/*
 $( document ).on( "pageinit", "#home", function() {
     $( document ).on( "swipeleft swiperight", "#home", function( e ) {
         // We check if there is no open panel on the page because otherwise
@@ -14,6 +14,46 @@ $( document ).on( "pageinit", "#home", function() {
         }
     });
 });
+*/
+
+
+
+
+//Mock json file
+
+var id_64 = {
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 16,
+    "yearGroup" : 11,
+    "tutorGroup" : "Wonder",
+    "houseGroup" : "Sharks",
+    "image" : "Not here yet!",
+}
+
+//Test
+console.log("Outside log age: " + id_64.age);
+
+var buildIt = function () {
+    var name = id_64.firstName +" "+id_64.lastName;
+    var age = id_64.age;
+    var year = "Year " + id_64.yearGroup;
+    var tutor = id_64.tutorGroup;
+    var house = id_64.houseGroup;
+        
+    //another test
+    console.log(name + age + year + tutor);
+
+    $("#userSpan").text(name);
+    $("#name").text(name);
+    $("#age").text(age);
+    $("#year_group").text(year);
+    $("#tutor_group").text(tutor);
+    $("#house_group").text(house);
+
+}
+
+
 
 //Changing themes
 
@@ -24,7 +64,7 @@ $black.append*/
 
 
 //NOTES SYSTEM!!!!
-
+/*
 var note;
 
 
@@ -33,3 +73,33 @@ function submitNote () {
 
     //use advanced methods to add notes like in trolley list in cc
 }
+*/
+
+/*
+var another = {
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 25,
+    "yearGroup" : 11,
+    "tutorGroup" : "Wonder",
+    "image" : "Not here yet!",
+        /*
+        "address": {
+            "streetAddress": "21 2nd Street",
+            "city": "New York",
+            "state": "NY",
+            "postalCode": 10021
+        },
+        "phoneNumbers": [
+            {
+                "type": "home",
+                "number": "212 555-1234"
+            },
+            {
+                "type": "fax",
+                "number": "646 555-4567"
+            }
+        ]
+        
+}
+*/

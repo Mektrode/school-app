@@ -95,7 +95,7 @@ td {
 
 /*Left Panel edits*/
 /* Swipe works with mouse as well but often causes text selection. */
-#home * {
+* {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -149,6 +149,30 @@ td > #week_a{
 
 #day {
     text-align: center;
+}
+
+#info p {
+    font-size: 90%;
+    padding: 0px;
+    margin: 0px;
+}
+
+span {
+    font-weight: bold;
+}
+
+
+#img_box {
+    padding-bottom: 8%;
+    height: 180px;
+    position: relative;
+}
+
+.profile_pic {
+    max-height: 100%; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 

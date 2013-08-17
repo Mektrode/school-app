@@ -31,21 +31,27 @@
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
 
-        <!-- The jQuery mobile links-->
-        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
-        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-
+        
         <!--Theme--><!--
         <link rel="stylesheet" href="theme1/themes/brown.min.css" />
         -->
+
         <!--Native files-->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+        <!-- The jQuery mobile links-->
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css" />
         
-        <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+        <script>//for any page after the login page!
+
+        $(document).on("swiperight", function (event, ui) {
+            $("#notification").panel("open");
+        });
+
+        </script>
 
     </head>
     <body>
@@ -90,7 +96,7 @@
                     
                         <p><a href="#home">Next</a></p>
                         <p><a href="index2.html">Change Theme</a></p>
-                        <input type="submit" onclick="logIn()" data-inline="true" data-theme="a" value="Submit" />
+                        <input type="submit" onclick="buildIt()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
             
@@ -126,15 +132,20 @@
                         
                         <a href="#profile" data-role="button" data-icon="info">Profile</a>
                         <a href="#timetable" data-role="button" data-icon="info"data-theme="b">Timetable</a>
-                        <a href="#notifications" data-role="button" data-icon="info"data-theme="d">Notifications</a>
+                        <a href="#" data-role="button" data-icon="info"data-theme="d">Notifications</a>
                         <a href="#exam_dates" data-role="button" data-icon="info"data-theme="e">Exam Dates</a>
                         <a href="#progress_review" data-role="button" data-icon="info"data-theme="c">Progress Review</a>
 
                         <a data-role="button" href="#notification" data-theme="d" data-icon="info">Open left panel</a>
                         <a data-role="button" href="#right-panel" data-theme="b" data-icon="info">Open right panel</a>
 
+                        <input type="submit" onclick="buildIt()" data-inline="true" data-theme="a" value="Load Data" />
+
                     </center>
 
+
+            </div>
+            <div data-role="footer">
 
                     <div data-role="navbar" data-iconpos="top">
                         <ul>
@@ -149,7 +160,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#settings" data-transition="fade" data-theme="c" data-icon="gear">
+                                <a href="#settings" data-transition="fade" data-theme="e" data-icon="gear">
                                     Settings
                                 </a>
                             </li>
@@ -157,20 +168,19 @@
                     </div>
             </div>
 
-            <!--Left Notifications Panel-->
+            <!--Left Notification Panel-->
 
-            <div data-role="panel" data-theme="a" id="notification" data-position="left">
+            <div data-role="panel" data-theme="a" id="notification" data-position="left" class="ui-response">
                     <h2>Header</h2>
                     <p>First bit of text...</p>
                     <hr>
-                    <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
             </div>
 
+            <!--Right Panel-->
 
             <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
                 <p>Right push panel.</p>
-                <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-            </div><!-- /panel -->
+            </div>
 
         </div>
 
@@ -192,19 +202,46 @@
 
             <div data-role="content">
 
-                <!--Grid system to increase responsivity-->
-                <div data-role="grid">
-                    <div style="height: 120px; position: relative;">
-                        <img src="img/loginpic.png" alt="image" style="max-height: 100%; display: block; margin-left: 10%; float:left;" />
-                    </div>
-                    <div style="float:left;">
-                        <p>Name: <span id="name">Mohammed Hussein</span></p><br>
-                        <p>Year Group: <span id="ygroup">Year 11</span></p><br>
-                        <p>Tutor Group: <span id="tgroup">Wonder</span></p><br>
-                    </div>
-                    <p>House Group: <span id="hgroup">The Sharks</span></p><br>
+                <div id="img_box" style="">
+                    <img src="img/loginpic.png" alt="image" class="profile_pic"/>
                 </div>
-                <p>Your school email: <span id="school_email">hussm209.988@lgfl.com</span></p>
+
+                <!--Grid system to increase responsivity-->
+                <div id="info" class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <p>Name: <span id="name"></span></p><br>
+                        <p>Age: <span id="age"></span></p><br>
+                        <p>Year Group: <span id="year_group"></span></p><br>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <p>Tutor Group: <span id="tutor_group"></span></p><br>
+                        <p>House Group: <span id="house_group"></span></p><br>
+                    </div>
+                </div>
+            </div>
+
+            <div data-role="footer">
+
+                    <div data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li>
+                                <a href="#attendence" data-transition="fade" data-theme="a" data-icon="star">
+                                    Attendance
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#reward_points" data-transition="fade" data-theme="a" data-icon="grid">
+                                    Reward Pts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#behaviour_points" data-transition="fade" data-theme="a" data-icon="gear">
+                                    Behaviour Pts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
             </div>
 
         </div>
@@ -366,6 +403,38 @@
 
 
 
+
+
+        <!--Settings-->
+
+        <div data-role="page" id="settings">
+
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>Settings</h3>
+
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-role="content">
+
+                <!--Change PASSWORD-->
+
+                <!--change theme colour-->
+
+            </div>
+
+        </div>
+
+
+
+
+
         <!--Template Blank-->
 
         <div data-role="page" id="??????">
@@ -447,6 +516,7 @@
         <!--Script Link files here(add the script js file to list here)-->
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
         <!--<script src="js/script.js"></script>
         <script src="js/auth.js"></script> too many bugs and not needed-->
@@ -454,6 +524,12 @@
         <script src="js/main.js"></script>
         <script src="js/parse.js"></script>
         <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+
+        <!-- The jQuery. UPDATE FILES IF NEW FEATURES ARE ADDED-->
+
+        <script src="js/jquery.mobile-1.3.2.js"></script>
+
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- Not needed yet!

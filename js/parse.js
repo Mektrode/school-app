@@ -35,7 +35,7 @@ $(document).ready(function() {
 			//loginpage = $("#login");// for adding popup...
 
 		// Validate
-		
+		/*
 		if (username.length == 0) {
 			alert("Wrong username or password! Please try again.");
 			//$username.parent().parent().addClass("error");//pop up error
@@ -46,7 +46,7 @@ $(document).ready(function() {
 			//$password.parent().parent().addClass("error");//pop up error
 			return false;
 		}
-		
+		*/
 
 		Parse.User.logIn(username, password, {
 			success: function(user) {
@@ -85,47 +85,7 @@ $(document).ready(function() {
 	}
 
 
-	//Mock json file
-
-	var id_64 = {
-	    "firstName": "John",
-	    "lastName": "Smith",
-	    "age": 25,
-	    "yearGroup" : 11,
-	    "tutorGroup" : "Wonder",
-	    "image" : "Not here yet!",
-	    /*
-	    "address": {
-	        "streetAddress": "21 2nd Street",
-	        "city": "New York",
-	        "state": "NY",
-	        "postalCode": 10021
-	    },
-	    "phoneNumbers": [
-	        {
-	            "type": "home",
-	            "number": "212 555-1234"
-	        },
-	        {
-	            "type": "fax",
-	            "number": "646 555-4567"
-	        }
-	    ]
-	    */
-	}
-
-	console.log("Outside log age: " + id_64.age);
-
-	function buildIt () {
-	    var name = id_64.firstName +" "+id_64.lastName;
-	    var age = id_64.age;
-	    var year = "Year " + id_64.yearGroup;
-	    var tutor = id_64.yearGroup + " " + id_64.tutorGroup;
-	    
-	    console.log(name + age + year + tutor);
-
-	    $(#userSpan)+=name;
-	}
+	
 
 
 
@@ -146,7 +106,7 @@ $(document).ready(function() {
 			return false;
 		}e
 	}
-
+//buildIt();
 	/*
 	function buildApp() {
 		// Get login menu
