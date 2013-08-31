@@ -1,0 +1,11 @@
+/* This css is for the login display, I have linked the main html to this file */
+
+#logincontainer {
+background: none repeat scroll 0% 0% rgb(231, 76, 60);
+margin: 25px auto;
+width: 380px;
+height: 340px;
+position: relative;
+font-family: 'Roboto'
+
+}
