@@ -41,20 +41,34 @@
         <link rel="stylesheet" href="css/main.css">
 
 
+       
         
-        
-        <!-- The jQuery mobile links-->
-        <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css" />
-        
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <!-- The jQuery mobile links-->
+            <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css" />
+            
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-        <script>//for any page after the login page!
+            <!--Keep links EXACTLY in this order-->
 
-        $(document).on("swiperight", function (event, ui) {
-            $("#notification").panel("open");
-        });
+            <!--Parse-->
+            <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+            
+            <!-- The jQuery. UPDATE FILES IF NEW FEATURES ARE ADDED-->
 
-        </script>
+            <script src="js/jquery.mobile-1.3.2.js"></script>
+
+
+            <script>//for any page after the login page!
+
+            $(document).on("swiperight", function (event, ui) {
+                $("#notification").panel("open");
+            });
+
+            $(document).on("swipeleft", function (event, ui) {
+                $("#library").panel("open");
+            });
+
+            </script>
 
     </head>
     <body>
@@ -99,7 +113,7 @@
                     
                         <p><a href="#home" data-transition="pop">Next</a></p>
                         <p><a href="index2.html">Change Theme</a></p>
-                        <input type="submit" onclick="buildIt() logIn()" data-inline="true" data-theme="a" value="Submit" />
+                        <input type="submit" onclick="submit()" data-inline="true" data-theme="a" value="Submit" />
                     </center>
                 </form>
             
@@ -174,15 +188,27 @@
             <!--Left Notification Panel-->
 
             <div data-role="panel" data-theme="a" id="notification" data-position="left" class="ui-response">
-                    <h2>Header</h2>
-                    <p>First bit of text...</p>
+                    <h2>Notifications</h2>
+                    <p>Displays live information about whats important to you on the go!</p>
                     <hr>
             </div>
 
             <!--Right Panel-->
 
-            <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
-                <p>Right push panel.</p>
+            <div data-role="panel" id="library" data-display="reveal" data-position="right" data-theme="e">
+                <center>
+                    <h2>Library</h2>
+                    <p>Right push panel.</p>
+                    <hr>
+                    <p>Right push panel.</p>
+                    <hr>
+                    <p>Right push panel.</p>
+                    <hr>
+                    <p>Right push panel.</p>
+                    <hr>
+                    <p>Right push panel.</p>
+                    <hr>
+                </center>
             </div>
 
         </div>
@@ -524,16 +550,13 @@
         <!--<script src="js/script.js"></script>
         <script src="js/auth.js"></script> too many bugs and not needed-->
 
-        <!--Parse-->
-        <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+        
 
         <script src="js/main.js"></script>
         <script src="js/parse.js"></script>
         
 
-        <!-- The jQuery. UPDATE FILES IF NEW FEATURES ARE ADDED-->
-
-        <script src="js/jquery.mobile-1.3.2.js"></script>
+       
 
 
 

@@ -18,7 +18,6 @@ $( document ).on( "pageinit", "#home", function() {
 
 
 
-
 //Mock json file
 
 var id_64 = {
@@ -50,7 +49,6 @@ var buildIt = function () {
     $("#year_group").text(year);
     $("#tutor_group").text(tutor);
     $("#house_group").text(house);
-
 }
 
 

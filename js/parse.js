@@ -4,27 +4,42 @@
 //
 
 // Init Parse
-$(document).ready(function() {
-  Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56WYXSPLp1ghBBYPlf6jXhP9");
-  return false;
+Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56WYXSPLp1ghBBYPlf6jXhP9");
 
+
+
+  	//Submit
+
+  	function submit() {
+    	login2();
+    	//buildIt();
+	}
 
 	//Works
 
-	 /*
+	function login2(){
+
+		var TestObject = Parse.Object.extend("TestObject");
+		var testObject = new TestObject();
+		testObject.save({foo: "bar"}, {
+		  success: function(object) {
+		    alert("yay! it worked");
+		  }
+		});
+	}
+	
 	var TestObject = Parse.Object.extend("TestObject");
-	var testObject = new TestObject();
-	testObject.save({foo: "bar"}, {
-	  success: function(object) {
-	    alert("yay! it worked");
-	  }
-	});
-	*/
+		var testObject = new TestObject();
+		testObject.save({foo: "bar"}, {
+		  success: function(object) {
+		    alert("yay! it worked");
+		  }
+		});
 
 
 	// Log In
 
-	function logIn() {
+	function login() {
 		// Get values
 		var $username = $("#userID"),
 		    $password = $("#pass");
@@ -120,4 +135,3 @@ $(document).ready(function() {
 			$userSpan.text(Parse.User.current().get("username"));
 		}
 	}*/
-});
