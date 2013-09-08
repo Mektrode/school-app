@@ -18,38 +18,6 @@ $( document ).on( "pageinit", "#home", function() {
 
 
 
-//Mock json file
-
-var id_64 = {
-    "firstName": "John",
-    "lastName": "Smith",
-    "age": 16,
-    "yearGroup" : 11,
-    "tutorGroup" : "Wonder",
-    "houseGroup" : "Sharks",
-    "image" : "Not here yet!",
-}
-
-//Test
-console.log("Outside log age: " + id_64.age);
-
-var buildIt = function () {
-    var name = id_64.firstName +" "+id_64.lastName;
-    var age = id_64.age;
-    var year = "Year " + id_64.yearGroup;
-    var tutor = id_64.tutorGroup;
-    var house = id_64.houseGroup;
-        
-    //another test
-    console.log(name + age + year + tutor);
-
-    $("#userSpan").text(name);
-    $("#name").text(name);
-    $("#age").text(age);
-    $("#year_group").text(year);
-    $("#tutor_group").text(tutor);
-    $("#house_group").text(house);
-}
 
 
 

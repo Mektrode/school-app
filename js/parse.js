@@ -8,84 +8,125 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 
 
 
-  	//Submit
-
-  	function submit() {
-    	login2();
-    	//buildIt();
-	}
-
 	//Works
 
-	function login2(){
+	var testfire = function () {
 
 		var TestObject = Parse.Object.extend("TestObject");
 		var testObject = new TestObject();
-		testObject.save({foo: "bar"}, {
+		testObject.save({foo: "in testfire(); with success buildIt AND login function after it!!!:D"}, {
 		  success: function(object) {
-		    alert("yay! it worked");
+		    alert("yay! the testfire worked; with success buildIt function after it ^^");
+		    buildIt();
+		    login();
 		  }
 		});
 	}
 	
+
+	//Mock json file
+
+	var id_64 = {
+	    "firstName": "John",
+	    "lastName": "Smith",
+	    "age": 16,
+	    "yearGroup" : 11,
+	    "tutorGroup" : "Wonder",
+	    "houseGroup" : "Sharks",
+	    "image" : "Not here yet!",
+	}
+
+	//Test
+	console.log("Outside log age: " + id_64.age);
+
+	var buildIt = function () {
+	    var name = id_64.firstName +" "+id_64.lastName;
+	    var age = id_64.age;
+	    var year = "Year " + id_64.yearGroup;
+	    var tutor = id_64.tutorGroup;
+	    var house = id_64.houseGroup;
+	        
+	    //another test
+	    console.log(name + age + year + tutor);
+
+	    $("#userSpan").text(name);
+	    $("#name").text(name);
+	    $("#age").text(age);
+	    $("#year_group").text(year);
+	    $("#tutor_group").text(tutor);
+	    $("#house_group").text(house);
+	}
+
+
+	/*
 	var TestObject = Parse.Object.extend("TestObject");
 		var testObject = new TestObject();
-		testObject.save({foo: "bar"}, {
+		testObject.save({foo: "common test"}, {
 		  success: function(object) {
-		    alert("yay! it worked");
+		    alert("yay! the test again, normal though");
 		  }
 		});
-
+	*/
 
 	// Log In
 
-	function login() {
+	var login = function () {
+		
 		// Get values
 		var $username = $("#userID"),
 		    $password = $("#pass");
 
 		    
 		var username = $username.val(),
-		    password = $password.val(),
+		    password = $password.val();
 			//loginpage = $("#login");// for adding popup...
 
+		//testing console.log(username +" "+ password);
+
+
 		// Validate
-		/*
+		
 		if (username.length == 0) {
 			alert("Wrong username or password! Please try again.");
 			//$username.parent().parent().addClass("error");//pop up error
 			return false;
 		}
+
 		else if (password.length == 0) {
 			alert("Wrong username or password! Please try again.");
 			//$password.parent().parent().addClass("error");//pop up error
 			return false;
 		}
-		*/
+
+		else {
+			alert("Username is " + username + " and Password is " + password);
+		}
+
 
 		Parse.User.logIn(username, password, {
 			success: function(user) {
-				
-				buildIt();
 
 				console.log("Logged IN!!!!!!");
+
+				alert("Logged in!")
 
 				// Load hompage
 				//window.location.href = "home.html";
 
-			/*
 				// Hide modal
-				$("#login").modal("hide");
+				//$("#login").modal("hide");
 
 				// Show menu
-				$("#login-menu-link").dropdown('toggle');
-			*/
-			
+				//$("#login-menu-link").dropdown('toggle');
+					
 			},
+
 			error: function(user, error) {
 				if (error.code == 101) {
 
-					console.log("ERROR");
+					console.log("ERROR! Cant login!");
+					alert("Check your username and password and try again!");
+
 					//$username.parent().parent().addClass("error");
 					return false;
 					// Load error pop
@@ -102,7 +143,7 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 
 	
 
-
+/*
 
 	function logOut() {
 		Parse.User.logOut();
@@ -121,14 +162,9 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 			return false;
 		}e
 	}
-//buildIt();
+
 	/*
 	function buildApp() {
-		// Get login menu
-		$loginMenu = $("#login-menu");
-		
-		// Get user span
-		$userSpan = $("#userSpan");
 		
 		// If user logged in
 		else {
