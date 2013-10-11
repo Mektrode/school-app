@@ -21,8 +21,8 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
-    background: url("images/wood_pattern.jpg") repeat scroll 0% 0% rgb(225, 193, 146);;
-    
+    background-image: "";
+    background-repeat: repeat-x;
     width: 100%;
     height: 100%;
 }
@@ -69,39 +69,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* I changed the css for this*/
+
 #contentpage1 {
-    background: none repeat scroll 0% 0% rgb(231, 76, 60);
-    margin: 25px auto;
-    width: 390px;
-    height: 340px;
-    position: relative;
-    font-family: 'Roboto';
-
+    background-image: "image/backgroundimage.gif";
+    background-repeat: no-repeat;
 }
 
-.form-action {
-padding: 0px 20px;
-position: relative;
 
-}
 
-.form-action h1 {
-    font-size: 42px;
-    padding-bottom: 10px;
-}
 
-.desctext {
-    font-size: 12px;
-    padding-bottom: 10px;
-    line-height: 25px;
-}
 
-.fieldentry {
-    padding-right: 20px;
-}
-
-/* ///////////////////////Above this is all of the css for the login form now///////////////////////////*/
 
 /*Timetable*/
 
