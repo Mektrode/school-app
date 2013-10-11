@@ -1,5 +1,5 @@
 
-/*
+
 $( document ).on( "pageinit", "#home", function() {
     $( document ).on( "swipeleft swiperight", "#home", function( e ) {
         // We check if there is no open panel on the page because otherwise
@@ -14,7 +14,7 @@ $( document ).on( "pageinit", "#home", function() {
         }
     });
 });
-*/
+
 
 
 

@@ -1,4 +1,4 @@
-function login(){
+/*function login(){
 	var process = new XMLHttpRequest();
 
 	var user = document.login.userID.value;
@@ -43,3 +43,4 @@ function login(){
 function errorPass (error){
 	//alert popup box!
 	alert("Wrong UserID or Password! or " + error);
+	*/

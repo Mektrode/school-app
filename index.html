@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
@@ -114,11 +115,14 @@
                         <p><a href="#home" data-transition="pop">Next</a></p>
                         <p><a href="index2.html">Change Theme</a></p>
 
-                        <input type="submit" onclick="testfire()" data-inline="true" data-theme="a" value="Submit" />
+                        <input type="submit" onclick="logIn()" data-inline="true" data-theme="a" value="Submit" />
+
+
 
                     </center>
                 </form>
             
+                <!--<input type="submit" onclick="newPage()" data-inline="true" data-theme="a" value="Submit" />-->
             </div>
 
         </div>
@@ -147,16 +151,18 @@
 
             <div data-role="content" id="contenthome">
                     <center>
-                        <h3>Welcome <span id="userSpan"></span>!</h3>
+                        <h3>Welcome <span id="userSpan">Guest</span>!</h3>
                         
                         <a href="#profile" data-role="button" data-icon="info">Profile</a>
                         <a href="#timetable" data-role="button" data-icon="info"data-theme="b">Timetable</a>
-                        <a href="#" data-role="button" data-icon="info"data-theme="d">Notifications</a>
+
+                        <a data-role="button" href="#error" data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-theme="d">Error Test</a>
+
                         <a href="#exam_dates" data-role="button" data-icon="info"data-theme="e">Exam Dates</a>
                         <a href="#progress_review" data-role="button" data-icon="info"data-theme="c">Progress Review</a>
 
-                        <a data-role="button" href="#notification" data-theme="d" data-icon="info">Open left panel</a>
-                        <a data-role="button" href="#right-panel" data-theme="b" data-icon="info">Open right panel</a>
+                        <a data-role="button" href="#comingSoon" data-theme="d" data-icon="info">Coming Soon Test</a>
+                        <a data-role="button" href="#" data-theme="b" data-icon="info">Extra</a>
 
                         <input type="submit" onclick="buildIt()" data-inline="true" data-theme="a" value="Load Data" />
 
@@ -187,31 +193,35 @@
                     </div>
             </div>
 
-            <!--Left Notification Panel-->
+            <!--Inject panels stuff into all these id on every page! <div id="panels"></div>-->
 
-            <div data-role="panel" data-theme="a" id="notification" data-position="left" class="ui-response">
-                    <h2>Notifications</h2>
-                    <p>Displays live information about whats important to you on the go!</p>
-                    <hr>
-            </div>
+            <!--PANELS-->
 
-            <!--Right Panel-->
+                <!--Left Notification Panel-->
 
-            <div data-role="panel" id="library" data-display="reveal" data-position="right" data-theme="e">
-                <center>
-                    <h2>Library</h2>
-                    <p>Right push panel.</p>
-                    <hr>
-                    <p>Right push panel.</p>
-                    <hr>
-                    <p>Right push panel.</p>
-                    <hr>
-                    <p>Right push panel.</p>
-                    <hr>
-                    <p>Right push panel.</p>
-                    <hr>
-                </center>
-            </div>
+                <div data-role="panel" data-theme="a" id="notification" data-position="left" class="ui-response">
+                        <h2>Notifications</h2>
+                        <p>Displays live information about whats important to you on the go!</p>
+                        <hr>
+                </div>
+
+                <!--Right Panel-->
+
+                <div data-role="panel" id="library" data-display="reveal" data-position="right" data-theme="e">
+                    <center>
+                        <h2>Library</h2>
+                        <p>Right push panel.</p>
+                        <hr>
+                        <p>Right push panel.</p>
+                        <hr>
+                        <p>Right push panel.</p>
+                        <hr>
+                        <p>Right push panel.</p>
+                        <hr>
+                        <p>Right push panel.</p>
+                        <hr>
+                    </center>
+                </div>
 
         </div>
 
@@ -296,14 +306,14 @@
 
             <div data-role="content">
                 
-                <center><h2><span id="userSpan"></span>'s Timetable</h2></center>
+                <center><h2><span id="name">Your</span> Timetable</h2></center>
 
                 <div data-role="controlgroup" id="my-controlgroup"><!-- items will be injected here --></div>
 
                 <table id="timetable">
 
                     <tr>
-                        <td id="week_a">Week A</td>
+                        <td id="week_a"> Week A </td>
                         <td id="day">Monday</td>
                         <td id="day">Tuesday</td>
                         <td id="day">Wednesday</td>
@@ -313,38 +323,39 @@
 
 
                     <tr>
-                        <td id="week_a"></td>
+                        <td id="period">1</td>
                         <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 1 day 1-->
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>History<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>Geography<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>Art<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>D.T<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                    </tr>
+
+
+                    <tr>
+                        <td id="period">2</td>
+                        <td>Maths<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 2 day 1-->
+                        <td>Science<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>R.E<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>French<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
                         <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
                     </tr>
 
 
                     <tr>
-                        <td id="week_a"></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 2 day 1-->
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                    </tr>
-
-
-                    <tr>
-                        <td id="week_a"></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 3 day 1-->
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
-                        <td>English<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td id="period">3</td>
+                        <td>Science<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td><!--Period 3 day 1-->
+                        <td>Business<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>Maths<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>Maths<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
+                        <td>Spanish<span id="small_left">JSU</span><span id="small_right">Rm 2.29</span></td>
                     </tr>
 
                 </table>
 
                 <a href="#weeka" data-role="button">Week A</a>
                 <a href="#weekb" data-role="button">Week B</a>
+                <p>Hold your smartphone sideways to view the full timetable</p>
 
             </div>
 
@@ -366,16 +377,7 @@
 
             <div data-role="content">
 
-                <!--Buttons-->
-
-                <!--Table-->
-
-
-                <!--Graph It-->
-                <center>
-                    <a href="#graph" data="button">Graph It!</a>
-                </center>
-
+                <img class="fullscreen"src="img/coming.jpg">
             </div>
 
         </div>
@@ -489,13 +491,94 @@
 
         </div>
 
+        
 
+        <!--Coming Soon!-->
 
+        <div data-role="page" id="comingSoon">
 
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
 
+                <h3>Coming Soon Test</h3>
 
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
 
+            <div data-role="content">
 
+                <img class="fullscreen"src="img/coming.jpg">
+            </div>
+        </div>
+
+        
+        <!--Attendance!-->
+
+        <div data-role="page" id="attendence">
+
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>Attendance</h3>
+
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-role="content">
+
+                <img class="fullscreen"src="img/coming.jpg">
+            </div>
+        </div>
+
+        <!--Reward Points!-->
+
+        <div data-role="page" id="reward_points">
+
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>Reward Points</h3>
+
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-role="content">
+                <img class="fullscreen"src="img/coming.jpg">
+            </div>
+        </div>
+
+        <!--Behaviour Points!-->
+
+        <div data-role="page" id="behaviour_points">
+
+            <div data-role="header" data-position="fixed">
+                <a data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>Behaviour Points</h3>
+
+                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-role="content">
+                <img class="fullscreen"src="img/coming.jpg">
+            </div>
+        </div>
 
 
         <!--Login Error (Popup)-Try making this popup red in theme. -->
@@ -509,8 +592,8 @@
 
             <div data-role="content" >
                 <!--List view here-->
-                <p>Hummm.... Either your Username or Password was wrong.</p>
-                <!--Error Image LOL--><center><img src="img/oops.jpg"></center>
+                <p>Your Username or Password was incorrect!</p>
+                <!--Error Image LOL--><center><img src="img/oops2.gif"></center>
             </div>
 
         </div>
@@ -533,7 +616,6 @@
             </div>
 
         </div>
-
 
 
         <!--TODO!-->

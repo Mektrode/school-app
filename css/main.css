@@ -198,9 +198,26 @@ span {
     margin-right: auto;
 }
 
+#period  {
+    font-weight: bold;
+    text-align: center;
+}
 
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
 
+    min-width: 100%;
+    min-height: 100%;
 
+    width: 100%;
+    height: auto;
+}
+
+#comingSoon {
+    background-color: black;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

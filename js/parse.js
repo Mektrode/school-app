@@ -14,15 +14,20 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 
 		var TestObject = Parse.Object.extend("TestObject");
 		var testObject = new TestObject();
-		testObject.save({foo: "in testfire(); with success buildIt AND login function after it!!!:D"}, {
+		testObject.save({foo: "Complete packages"}, {
 		  success: function(object) {
 		    alert("yay! the testfire worked; with success buildIt function after it ^^");
-		    buildIt();
-		    login();
+		    
 		  }
 		});
 	}
 	
+	//New Page function
+
+	var newPage = function () {
+		$.mobile.changePage('#error', {transition: 'pop', role: 'dialog'});
+	}
+
 
 	//Mock json file
 
@@ -70,7 +75,7 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 
 	// Log In
 
-	var login = function () {
+	var logIn = function () {
 		
 		// Get values
 		var $username = $("#userID"),
@@ -87,45 +92,62 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 		// Validate
 		
 		if (username.length == 0) {
-			alert("Wrong username or password! Please try again.");
+			//alert("Wrong username or password! Please try again.");
+
 			//$username.parent().parent().addClass("error");//pop up error
+
+
+			console.log("Wrong username or password! Please try again.");
+
+			$.mobile.changePage('#error', {transition: 'pop', role: 'dialog'});
+
+			newPage();
+
 			return false;
 		}
 
 		else if (password.length == 0) {
-			alert("Wrong username or password! Please try again.");
+			//alert("Wrong username or password! Please try again.");
+
 			//$password.parent().parent().addClass("error");//pop up error
+
+			console.log("Wrong username or password! Please try again.");
+
+			$.mobile.changePage('#error', {transition: 'pop', role: 'dialog'});
+
+			newPage();
+
 			return false;
 		}
 
 		else {
-			alert("Username is " + username + " and Password is " + password);
+			//alert("Username is " + username + " and Password is " + password);
 		}
 
 
 		Parse.User.logIn(username, password, {
 			success: function(user) {
 
-				console.log("Logged IN!!!!!!");
+				//console.log("Logged IN!!!!!!");
 
-				alert("Logged in!")
+				//alert("Logged in!");
 
-				// Load hompage
-				//window.location.href = "home.html";
+				$.mobile.changePage('#home');
 
-				// Hide modal
-				//$("#login").modal("hide");
+				if (buildIt()) {
+					console.log("loaded build from success!");
+				}
 
-				// Show menu
-				//$("#login-menu-link").dropdown('toggle');
 					
 			},
 
 			error: function(user, error) {
 				if (error.code == 101) {
 
-					console.log("ERROR! Cant login!");
-					alert("Check your username and password and try again!");
+					//console.log("ERROR! Cant login!");
+					//alert("Check your username and password and try again!");
+
+					$.mobile.changePage('#error', {transition: 'pop', role: 'dialog'});
 
 					//$username.parent().parent().addClass("error");
 					return false;
@@ -143,7 +165,6 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 
 	
 
-/*
 
 	function logOut() {
 		Parse.User.logOut();
@@ -160,7 +181,7 @@ Parse.initialize("R1bfstsvkwEZfxODzNCMDyhy8cYMqq6Kve2LDhwq", "JwOBAv1LAl702XpJ56
 
 			console.log("You must be logged in to continue.");
 			return false;
-		}e
+		}
 	}
 
 	/*
