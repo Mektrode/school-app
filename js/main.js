@@ -18,15 +18,23 @@ $( document ).on( "pageinit", "#home", function() {
 
 
 
+/* ***********************
+
+THEMES
+
+****************************/
+$("#green").click(function() {
+    $('div, a').attr('data-theme', 'a').removeClass('ui-body-g').addClass('ui-body-a').trigger('create');
+});
+
+
+$("#red").click(function() {
+    $('div, a').attr('data-theme', 'g').removeClass('ui-body-a').addClass('ui-body-g').trigger('create');
+});
 
 
 
-//Changing themes
-
-//black 
-/*
-$blackTheme = $("data-theme = a")
-$black.append*/
+/* EMD THEMES*/
 
 
 //NOTES SYSTEM!!!!
