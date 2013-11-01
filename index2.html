@@ -33,6 +33,12 @@
 
         <!-- The jQuery mobile links-->
         <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+         <link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+
+            <link rel="stylesheet" href="css/theme.css" />
+
+            
         <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
         <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
@@ -52,14 +58,14 @@
         <!-- Login Page -->
         <div data-role="page" id="login" >
 
-            <div data-theme="a" data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
+            <div data-theme="g" data-role="header" data-position="fixed">
+                <a  data-corners="false" data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
                 <h3>
                     Welcome
                 </h3>
             </div>
 
-            <div data-role="content" id="contentpage1" data-theme="a">
+            <div data-role="content" id="contentpage1" data-theme="g">
 
                 <h3 style="text-align: center;">
                     School App
@@ -68,9 +74,9 @@
                     <img src="img/loginpic.png" alt="image" style="max-height: 100%; display: block; margin-left: auto; margin-right: auto;" />
                 </div>
 
-                <form action="" name="login" data-theme="a">
+                <form action="" name="login" data-theme="g">
 
-                    <div data-role="fieldcontain" data-theme="a">
+                    <div data-role="fieldcontain" data-theme="g">
                         <label for="textinput1">
                             User ID
                         </label>
@@ -85,10 +91,10 @@
                     </div>
 
                     <center>
-                        <p><a href="index2.html#homea" data-theme="a">Next</a></p> <!--Bug HERE-->
+                        <p><a  data-corners="false" href="#homea" data-theme="g">Next</a></p> <!--Bug HERE-->
 
-                        <a href="index.html" data-role="button" data-icon="info" data-theme="a">Back to Original</a>
-                    <input type="submit" onclick="errorPass()" data-inline="true" data-theme="a" value="Submit" />
+                        <a  data-corners="false" href="index.html" data-role="button" data-icon="info" data-theme="g">Back to Original</a>
+                    <input type="submit" onclick="errorPass()" data-inline="true" data-theme="g" value="Submit" />
                     </center>
                 </form>
             
@@ -98,51 +104,51 @@
 
 
         <!--Home Page-->
-        <div data-role="page" id="homea" data-theme="a">
+        <div data-role="page" id="homea" data-theme="g">
 
-            <div data-role="header" data-position="fixed"  data-theme="a">
-                <a data-role="button" data-direction="reverse" href="#login" data-theme="a" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-role="header" data-position="fixed"  data-theme="g">
+                <a  data-corners="false" data-role="button" data-direction="reverse" href="#login" data-theme="g" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
                 <h3>
                     Home
                 </h3>
                 
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right" data-theme="a">
+                <a  data-corners="false" data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right" data-theme="g">
                     Notes
                 </a>
             </div>
 
 
-            <div data-role="content" id="contenthome" data-theme="a">
+            <div data-role="content" data-theme="g">
                 <div>
                     <center>
                         <h3>Welcome Mohammed Hussein!</h3>
                         
-                        <a href="#profile" data-role="button" data-icon="info" data-theme="a">Profile</a>
-                        <a href="#timetable" data-role="button" data-icon="info"data-theme="a">Timetable</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="a">Three</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="a">Four</a>
-                        <a href="#profile" data-role="button" data-icon="info"data-theme="a">Five</a>
+                        <a  data-corners="false" href="#profile" data-role="button" data-icon="info" data-theme="g">Profile</a>
+                        <a  data-corners="false" href="#timetable" data-role="button" data-icon="info"data-theme="g">Timetable</a>
+                        <a  data-corners="false" href="#profile" data-role="button" data-icon="info"data-theme="g">Three</a>
+                        <a  data-corners="false" href="#profile" data-role="button" data-icon="info"data-theme="g">Four</a>
+                        <a  data-corners="false" href="#profile" data-role="button" data-icon="info"data-theme="g">Five</a>
 
-                        <a href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="a" data-inline="true" value="Wanna see a popup?!"/> </a>
+                        <a  data-corners="false" href="#popup" data-rel="dialog" data-transition="pop"> <input data-theme="g" data-inline="true" value="Wanna see a popup?!"/> </a>
                     </center>
 
 
-                    <div data-role="navbar" data-iconpos="top"  data-theme="a">
+                    <div data-role="navbar" data-iconpos="top"  data-theme="g">
                         <ul>
                             <li>
-                                <a href="#timetable" data-transition="fade" data-theme="a" data-icon="star">
+                                <a  data-corners="false" href="#timetable" data-transition="fade" data-theme="g" data-icon="star">
                                     Timetable
                                 </a>
                             </li>
                             <li>
-                                <a href="#profile" data-transition="fade" data-theme="a" data-icon="grid">
+                                <a  data-corners="false" href="#profile" data-transition="fade" data-theme="g" data-icon="grid">
                                     Profile
                                 </a>
                             </li>
                             <li>
-                                <a href="#settings" data-transition="fade" data-theme="a" data-icon="gear">
+                                <a  data-corners="false" href="#settings" data-transition="fade" data-theme="g" data-icon="gear">
                                     Settings
                                 </a>
                             </li>
@@ -157,7 +163,7 @@
         <!--Popup box!-->
         <div data-role="page" id="popup">
 
-            <div data-theme="a" data-role="header" data-position="fixed">
+            <div data-theme="g" data-role="header" data-position="fixed">
                 <h3>
                     POP!
                 </h3>
@@ -165,7 +171,7 @@
 
             <div data-role="content" >
                 <p>So, this is my first dialog ever made. Under is a link below back to where u cam from B****!</p>
-                <a href="#Home"><input/></a>
+                <a  data-corners="false" href="#Home"><input/></a>
             </div>
 
         </div>
@@ -175,13 +181,13 @@
         <div data-role="page" id="profile">
 
             <div data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                <a  data-corners="false" data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Profile</h3>
 
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a  data-corners="false" data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
@@ -210,13 +216,13 @@
         <div data-role="page" id="timetable">
 
             <div data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                <a  data-corners="false" data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>TimeTable</h3>
 
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a  data-corners="false" data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
@@ -268,8 +274,8 @@
 
                 </table>
 
-                <a href="#weeka" data-role="button">Week A</a>
-                <a href="#weekb" data-role="button">Week B</a>
+                <a  data-corners="false" href="#weeka" data-role="button">Week A</a>
+                <a  data-corners="false" href="#weekb" data-role="button">Week B</a>
 
             </div>
 
@@ -283,13 +289,13 @@
         <div data-role="page" id="p_review">
 
             <div data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                <a  data-corners="false" data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Progress REview</h3>
 
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a  data-corners="false" data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
@@ -309,13 +315,13 @@
         <div data-role="page" id="p_review">
 
             <div data-role="header" data-position="fixed">
-                <a data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                <a  data-corners="false" data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Progress REview</h3>
 
-                <a data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a  data-corners="false" data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
@@ -345,7 +351,7 @@
         <!--Notes System(Popup)-->
         <div data-role="page" id="notes">
 
-            <div data-theme="a" data-role="header" data-position="fixed">
+            <div data-theme="g" data-role="header" data-position="fixed">
                 <h3>
                     Just Notes.
                 </h3>
@@ -355,7 +361,7 @@
                 <!--List view here-->
                 <p>Make Notes here...</p>
                 <input name="newnote" id="newnote" placeholder="Type your note here" value="" type="text" data-mini="true"/>
-                <input type="submit" onclick="submitNote()" data-inline="true" data-theme="a" value="Submit"/>
+                <input type="submit" onclick="submitNote()" data-inline="true" data-theme="g" value="Submit"/>
             </div>
 
         </div>

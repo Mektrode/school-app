@@ -46,11 +46,7 @@
         
             <!-- The jQuery mobile links-->
             <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css" />
-
-            <link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
-
-            <link rel="stylesheet" href="css/theme.css" />
-
+            
             <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
             <!--Keep links EXACTLY in this order-->
@@ -76,13 +72,13 @@
             </script>
 
     </head>
-    <body>
+    <body style="background: url('img/wood_pattern.png') repeat !important;">
         
         <!--Splashscreen-->
 
         <div data-role="page" id="splash"> 
           <div class="splash">
-            <img src="img/startup.png" alt="startup image" class="fullscreen"/>
+            <img src="img/startup.png" alt="startup image"  style="width: 100%;"/>
 
                 <script type='text/javascript'>//<![CDATA[ 
                     $(window).load(function(){
@@ -94,6 +90,7 @@
                     $.mobile.changePage("#login", "fade");
                     }
 
+
                     });//]]>  
                 </script>
           </div>
@@ -104,7 +101,7 @@
         <!-- Site/application content -->
 
         <!-- Login Page -->
-        <div data-role="page" id="login">
+        <div data-role="page" id="login" style="background: url('img/wood_pattern.png') repeat !important;">
 
             <div data-theme="a" data-role="header" data-position="fixed">
                 <a data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
@@ -140,8 +137,7 @@
 
                     
                         <p><a href="#home" data-transition="pop">Next</a></p>
-                        <p><a href="index2.html">Changed Theme Login</a></p>
-                        <p><a href="index2.html#homea">Changed Theme Home</a></p>
+                        <p><a href="index2.html">Change Theme</a></p>
 
                         <input type="submit" onclick="logIn()" data-inline="true" data-theme="a" value="Submit" />
 
@@ -157,7 +153,7 @@
 
 
         <!--Home Page-->
-        <div data-role="page" id="home">
+        <div data-role="page" id="home" style="background: url('img/wood_pattern.png') repeat !important;">
 <!--
 <a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
 -->
@@ -177,7 +173,7 @@
             </div>
 
 
-            <div data-role="content" id="contenthome">
+            <div data-role="content" id="contenthome" style="background: url('img/wood_pattern.png') repeat !important;">
                     <center>
                         <h3>Welcome <span id="userSpan">Guest</span>!</h3>
                         
@@ -236,19 +232,7 @@
                 <!--Right Panel-->
 
                 <div data-role="panel" id="library" data-display="reveal" data-position="right" data-theme="e">
-                    <center>
-                        <h2>Library</h2>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                    </center>
+                    <img src="img/shelves.png" style=" position: absolute !important; height: 100% !important; width: 100% !important;"/>
                 </div>
 
         </div>
