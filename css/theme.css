@@ -164,3 +164,176 @@
 	font-family: 'Schoolbell', Arial, sans-serif /*{global-font-family}*/;
 	text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* R
+-----------------------------------------------------------------------------------------------------------*/
+.ui-bar-r {
+	border: 1px solid 		#4c4c4c /*{r-bar-border}*/;
+	background: 			#333 /*{r-bar-background-color}*/;
+	color: 					#fff /*{r-bar-color}*/;
+	font-weight: bold;
+
+	text-shadow: 0 /*{r-bar-shadow-x}*/ -1px /*{r-bar-shadow-y}*/ 0 /*{r-bar-shadow-radius}*/ #000 /*{r-bar-shadow-color}*/;
+
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #4c4c4c /*{r-bar-background-start}*/), to( #303030 /*{r-bar-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #4c4c4c /*{r-bar-background-start}*/, #303030 /*{r-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #4c4c4c /*{r-bar-background-start}*/, #303030 /*{r-bar-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #4c4c4c /*{r-bar-background-start}*/, #303030 /*{r-bar-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #4c4c4c /*{r-bar-background-start}*/, #303030 /*{r-bar-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #4c4c4c /*{r-bar-background-start}*/, #303030 /*{r-bar-background-end}*/);
+}
+.ui-bar-r,
+.ui-bar-r input,
+.ui-bar-r select,
+.ui-bar-r textarea,
+.ui-bar-r button {
+	font-family: 'Della Respira', Arial, sans-serif /*{global-font-family}*/;
+}
+.ui-bar-r .ui-link-inherit {
+	color: #fff /*{r-bar-color}*/;
+}
+.ui-bar-r a.ui-link {
+	color: #7cc4e7 /*{r-bar-link-color}*/;
+	font-weight: bold;
+}
+.ui-bar-r a.ui-link:visited {
+    color: #2489ce /*{r-bar-link-visited}*/;
+}
+.ui-bar-r a.ui-link:hover {
+	color: #2489ce /*{r-bar-link-hover}*/;
+}
+.ui-bar-r a.ui-link:active {
+	color: #2489ce /*{r-bar-link-gctive}*/;
+}
+
+
+/*BODY*/
+.ui-body-r,
+.ui-overlay-r {
+	border: 1px solid 		#666 /*{r-body-border}*/;
+	background: 			#404040 /*{r-body-background-color}*/;
+	color: 					#fff /*{r-body-color}*/;
+	text-shadow: 0 /*{r-body-shadow-x}*/ 1px /*{r-body-shadow-y}*/ 0 /*{r-body-shadow-radius}*/ #111 /*{r-body-shadow-color}*/;
+	font-weight: normal;
+	background-image: -webkit-rradient(linear, left top, left bottom, from( #666 /*{r-body-background-start}*/), to( #404040 /*{r-body-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-rradient( #666 /*{r-body-background-start}*/, #404040 /*{r-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-rradient( #666 /*{r-body-background-start}*/, #404040 /*{r-body-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-rradient( #666 /*{r-body-background-start}*/, #404040 /*{r-body-background-end}*/); /* IE10 */
+	background-image:      -o-linear-rradient( #666 /*{r-body-background-start}*/, #404040 /*{r-body-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-rradient( #666 /*{r-body-background-start}*/, #404040 /*{r-body-background-end}*/);	
+}
+.ui-overlay-r {
+	background-image: none;
+	border-width: 0;
+}
+.ui-body-r,
+.ui-body-r input,
+.ui-body-r select,
+.ui-body-r textarea,
+.ui-body-r button {
+	font-family: 'Della Respira', Arial, sans-serif /*{global-font-family}*/;
+}
+.ui-body-r .ui-link-inherit {
+	color: 	#fff /*{r-body-color}*/;
+}
+.ui-body-r .ui-link {
+	color: #2489ce /*{r-body-link-color}*/;
+	font-weight: bold;
+}
+.ui-body-r .ui-link:visited {
+    color: #2489ce /*{r-body-link-visited}*/;
+}
+.ui-body-r .ui-link:hover {
+	color: #2489ce /*{r-body-link-hover}*/;
+}
+.ui-body-r .ui-link:active {
+	color: #2489ce /*{r-body-link-rctive}*/;
+}
+
+
+/*BUTTONS*/
+.ui-btn-up-r {
+	border: 1px solid 		#77000 /*{r-bup-border}*/;
+	background: 			#77000 /*{r-bup-background-color}*/;
+	font-weight: bold;
+	color: 					#fff /*{r-bup-color}*/;
+	box-shadow: 3px 3px #540000;
+	text-shadow: 0 /*{r-bup-shadow-x}*/ 1px /*{r-bup-shadow-y}*/ 0 /*{r-bup-shadow-radius}*/ #111 /*{r-bup-shadow-color}*/;
+	background-image: -webkit-rradient(linear, left top, left bottom, from( #770000 /*{r-bup-background-start}*/), to( #FF4c4c /*{r-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-rradient( #770000 /*{r-bup-background-start}*/, #FF4c4c /*{r-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-rradient( #770000 /*{r-bup-background-start}*/, #FF4c4c /*{r-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-rradient( #770000 /*{r-bup-background-start}*/, #FF4c4c /*{r-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-rradient( #770000 /*{r-bup-background-start}*/, #FF4c4c /*{r-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-rradient( #770000 /*{r-bup-background-start}*/, #FF4c4c /*{r-bup-background-end}*/);
+}
+.ui-btn-up-r:visited,
+.ui-btn-up-r a.ui-link-inherit {
+	color: 					#fff /*{r-bup-color}*/;
+}
+.ui-btn-hover-r {
+	border: 1px solid 		#540000 /*{r-bhover-border}*/;
+	background: 			#540000 /*{r-bhover-background-color}*/;
+	font-weight: bold;
+	box-shadow: 3px 3px #540000;
+	color: 					#fff /*{r-bhover-color}*/;
+	text-shadow: 0 /*{r-bhover-shadow-x}*/ 1px /*{r-bhover-shadow-y}*/ 0 /*{r-bhover-shadow-radius}*/ #111 /*{r-bhover-shadow-color}*/;
+	background-image: -webkit-rradient(linear, left top, left bottom, from( #540000 /*{r-bhover-background-start}*/), to( #540000 /*{r-bhover-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-rradient( #540000 /*{r-bhover-background-start}*/, #540000 /*{r-bhover-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-rradient( #540000 /*{r-bhover-background-start}*/, #540000 /*{r-bhover-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-rradient( #540000 /*{r-bhover-background-start}*/, #540000 /*{r-bhover-background-end}*/); /* IE10 */
+	background-image:      -o-linear-rradient( #540000 /*{r-bhover-background-start}*/, #540000 /*{r-bhover-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-rradient( #540000 /*{r-bhover-background-start}*/, #540000 /*{r-bhover-background-end}*/);
+}
+.ui-btn-hover-r:visited,
+.ui-btn-hover-r:hover,
+.ui-btn-hover-r a.ui-link-inherit {
+	color: 					#fff /*{r-bhover-color}*/;
+}
+.ui-btn-down-r {
+	border: 1px solid 		#2e9929 /*{r-bdown-border}*/;
+	background: 			#2e9929 /*{r-bdown-background-color}*/;
+	font-weight: bold;
+	box-shadow: 3px 3px #2B5F29;
+	color: 					#fff /*{r-bdown-color}*/;
+	text-shadow: 0 /*{r-bdown-shadow-x}*/ 1px /*{r-bdown-shadow-y}*/ 0 /*{r-bdown-shadow-radius}*/ #111 /*{r-bdown-shadow-color}*/;
+	background-image: -webkit-rradient(linear, left top, left bottom, from( #2e9929 /*{r-bdown-background-start}*/), to( #2e9929 /*{r-bdown-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-rradient( #2e9929 /*{r-bdown-background-start}*/, #2e9929 /*{r-bdown-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-rradient( #2e9929 /*{r-bdown-background-start}*/, #2e9929 /*{r-bdown-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-rradient( #2e9929 /*{r-bdown-background-start}*/, #2e9929 /*{r-bdown-background-end}*/); /* IE10 */
+	background-image:      -o-linear-rradient( #2e9929 /*{r-bdown-background-start}*/, #2e9929 /*{r-bdown-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-rradient( #2e9929 /*{r-bdown-background-start}*/, #2e9929 /*{r-bdown-background-end}*/);
+}
+.ui-btn-down-r:visited,
+.ui-btn-down-r:hover,
+.ui-btn-down-r a.ui-link-inherit {
+	color: 					#fff /*{r-bdown-color}*/;
+}
+.ui-btn-up-r,
+.ui-btn-hover-r,
+.ui-btn-down-r {
+	font-family: 'Della Respira', Arial, sans-serif /*{global-font-family}*/;
+	text-decoration: none;
+}

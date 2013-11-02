@@ -24,12 +24,12 @@ THEMES
 
 ****************************/
 $("#green").click(function() {
-    $('div, a').attr('data-theme', 'a').removeClass('ui-body-g').addClass('ui-body-a').trigger('create');
+    $('.themeChange').attr('data-theme', 'g').removeClass('ui-body-r').addClass('ui-body-g').trigger('create');
 });
 
 
 $("#red").click(function() {
-    $('div, a').attr('data-theme', 'g').removeClass('ui-body-a').addClass('ui-body-g').trigger('create');
+    $('.themeChange').attr('data-theme', 'r').removeClass('ui-body-g').addClass('ui-body-r').trigger('create');
 });
 
 

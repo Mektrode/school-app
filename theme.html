@@ -49,6 +49,8 @@
 
             <link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
 
+            <link href='http://fonts.googleapis.com/css?family=Della+Respira' rel='stylesheet' type='text/css'>
+
             <link rel="stylesheet" href="css/theme.css" />
 
             <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -80,7 +82,7 @@
         
         <!--Splashscreen-->
 
-        <div data-theme="g" data-role="page" id="splash"> 
+        <div data-theme="g" class="themeChange" data-role="page" id="splash"> 
           <div class="splash">
             <img src="img/startup.png" alt="startup image" class="fullscreen"/>
 
@@ -104,16 +106,16 @@
         <!-- Site/application content -->
 
         <!-- Login Page -->
-        <div data-theme="g" data-role="page" id="login" data-theme="g">
+        <div data-theme="g" class="themeChange" data-role="page" id="login" data-theme="g">
 
-            <div data-theme="g" data-role="header" data-position="fixed" data-theme="g">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed" data-theme="g">
+                <a class="themeChange" data-corners="false"data-role="button" data-direction="reverse" href="#page1" data-icon="refresh" data-iconpos="left" class="ui-btn-right"> R </a>
                 <h3>
                     Welcome
                 </h3>
             </div>
 
-            <div data-theme="g" data-role="content" id="contentpage1">
+            <div data-role="content" id="contentpage1">
 
                 <h3 style="text-align: center;">
                     School App
@@ -125,14 +127,14 @@
 
                 <form action="" name="login" data-theme="g">
 
-                    <div data-theme="g" data-role="fieldcontain" data-theme="g">
+                    <div data-role="fieldcontain" data-theme="g">
                         <label for="textinput1">
                             User ID
                         </label>
                         <input name="userID" id="textinput1" placeholder="Your ID here" value="" type="text" data-mini="true" />
                     </div>
 
-                    <div data-theme="g" data-role="fieldcontain">
+                    <div data-role="fieldcontain">
                         <label for="textinput2">
                             Password
                         </label>
@@ -141,11 +143,9 @@
 
 
                     <center>
-                        <p><a data-corners="false"href="#home" data-transition="pop">Next</a></p>
-                        <p><a data-corners="false"href="index2.html">Changed Theme Login</a></p>
-                        <p><a data-corners="false"href="index2.html#homea">Changed Theme Home</a></p>
+                        <p><a data-corners="false" href="#home" data-transition="flow">Next</a></p>
 
-                        <input type="submit" onclick="logIn()" data-inline="true" value="Submit" />
+                        <input class="themeChange" type="submit" onclick="logIn()" data-inline="true" value="Submit" />
 
                     </center>
                 </form>
@@ -159,8 +159,8 @@
         <!--Home Page-->
         <div data-role="page" id="home" data-theme="g">
             
-            <div data-theme="g" data-role="header" data-position="fixed" data-theme="g">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#login" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed" data-theme="g">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#login" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     <!--data-theme="g" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc"-->
                     Back
                 </a>
@@ -168,7 +168,7 @@
                     Home
                 </h3>
                 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
@@ -178,39 +178,41 @@
                     <center>
                         <h3>Welcome <span id="userSpan">Guest</span>!</h3>
                         
-                        <a data-corners="false"href="#profile" data-role="button" data-icon="info">Profile</a>
-                        <a data-corners="false"href="#timetable" data-role="button" data-icon="info"data-theme="g">Timetable</a>
+                        <a class="themeChange"data-corners="false"href="#profile" data-role="button" data-icon="info"data-transition="flow">Profile</a>
+                        <a class="themeChange"data-corners="false"href="#timetable" data-role="button" data-direction="reverse" data-icon="info"data-transition="flip">Timetable</a>
 
-                        <a data-corners="false"data-role="button" href="#error" data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-theme="g">Error Test</a>
+                        <a class="themeChange"data-corners="false"data-role="button" href="#error" data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-theme="g">Error Test</a>
 
-                        <a data-corners="false"href="#exam_dates" data-role="button" data-icon="info"data-theme="g">Exam Dates</a>
-                        <a data-corners="false"href="#progress_review" data-role="button" data-icon="info"data-theme="g">Progress Review</a>
+                        <a class="themeChange"data-corners="false"href="#exam_dates" data-transition="turn" data-role="button" data-icon="info"data-theme="g">Exam Dates</a>
 
-                        <a data-corners="false"data-role="button" href="#comingSoon" data-theme="g" data-icon="info">Coming Soon Test</a>
-                        <a data-corners="false"data-role="button" href="#" data-theme="g" data-icon="info">Extra</a>
+                        <a class="themeChange"data-corners="false"href="#progress_review" data-transition="slideup" data-role="button" data-icon="info"data-theme="g">Progress Review</a>
 
-                        <input type="submit" onclick="buildIt()" data-inline="true" data-theme="g" value="Load Data" />
+                        <a class="themeChange"data-corners="false"data-role="button" href="#comingSoon" data-theme="g" data-icon="info">Coming Soon Test</a>
+
+                        <a class="themeChange"data-corners="false"data-role="button" href="#" data-theme="g" data-icon="info">Extra</a>
+
+                        <input class="themeChange" type="submit" onclick="buildIt()" data-inline="true" data-theme="g" value="Load Data" />
 
                     </center>
 
 
             </div>
-            <div data-theme="g" data-role="footer">
+            <div data-theme="g" class="themeChange" data-role="footer">
 
-                    <div data-theme="g" data-role="navbar" data-iconpos="top">
+                    <div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top">
                         <ul>
                             <li>
-                                <a data-corners="false"href="#timetable" data-transition="fade" data-theme="g" data-icon="star">
+                                <a class="themeChange"data-corners="false"href="#timetable" data-transition="flow" data-theme="g" data-icon="star">
                                     Timetable
                                 </a>
                             </li>
                             <li>
-                                <a data-corners="false"href="#profile" data-transition="fade" data-theme="g" data-icon="grid">
+                                <a class="themeChange"data-corners="false"href="#profile" data-transition="flip" data-theme="g" data-icon="grid">
                                     Profile
                                 </a>
                             </li>
                             <li>
-                                <a data-corners="false"href="#settings" data-transition="fade" data-theme="g" data-icon="gear">
+                                <a class="themeChange"data-corners="false"href="#settings" data-transition="slidedown" data-theme="g" data-icon="gear">
                                     Settings
                                 </a>
                             </li>
@@ -224,7 +226,7 @@
 
                 <!--Left Notification Panel-->
 
-                <div data-theme="g" data-role="panel" id="notification" data-position="left" class="ui-response">
+                <div data-theme="g" class="themeChange" data-role="panel" id="notification" data-position="left" class="ui-response">
                         <h2>Notifications</h2>
                         <p>Displays live information about whats important to you on the go!</p>
                         <hr>
@@ -232,14 +234,14 @@
                         <ul data-role="listview" data-inset="true">
                             <li data-role="list-divider">Thursday, October 31, 2013 <span class="ui-li-count">2</span></li>
 
-                            <li><a href="index.html">
+                            <li><a class="themeChange"href="index.html">
                                 <h2>John Smith</h2>
                                 <p><strong>You've been invited to a Dinner at Party Group in London</strong></p>
                                 <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
                                 <p class="ui-li-aside"><strong>6:24</strong>PM</p>
                             </a></li>
 
-                            <li><a href="index.html">
+                            <li><a class="themeChange"href="index.html">
                                 <h2>jQuery Team</h2>
                                 <p><strong>London Conference Planning</strong></p>
                                 <p>In preparation for the upcoming conference in London, we need to start gathering a list of sponsors and speakers.</p>
@@ -248,7 +250,7 @@
 
                             <li data-role="list-divider">Wednesday, October 30, 2013 <span class="ui-li-count">1</span></li>
 
-                            <li><a href="index.html">
+                            <li><a class="themeChange"href="index.html">
                                 <h2>Luke Walker</h2>
                                 <p><strong>Re: Our Revision Tonight</strong></p>
                                 <p>Sure, let's plan on meeting at Sephs House at 8:00 tonight. Can't wait! </p>
@@ -279,21 +281,21 @@
 
 
         <!--Profile Page-->
-        <div data-theme="g" data-role="page" id="profile">
+        <div data-theme="g" class="themeChange" data-role="page" id="profile">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Profile</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
 
                 <div id="img_box" style="">
                     <img src="img/loginpic.png" alt="image" class="profile_pic"/>
@@ -314,22 +316,22 @@
                 </div>
             </div>
 
-            <div data-theme="g" data-role="footer">
+            <div data-theme="g" class="themeChange" data-role="footer">
 
-                    <div data-theme="g" data-role="navbar" data-iconpos="top">
+                    <div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top">
                         <ul>
                             <li>
-                                <a data-corners="false"href="#attendence" data-transition="fade" data-theme="g" data-icon="star">
+                                <a class="themeChange"data-corners="false"href="#attendence" data-transition="fade" data-theme="g" data-icon="star">
                                     Attendance
                                 </a>
                             </li>
                             <li>
-                                <a data-corners="false"href="#reward_points" data-transition="fade" data-theme="g" data-icon="grid">
+                                <a class="themeChange"data-corners="false"href="#reward_points" data-transition="fade" data-theme="g" data-icon="grid">
                                     Reward Pts
                                 </a>
                             </li>
                             <li>
-                                <a data-corners="false"href="#behaviour_points" data-transition="fade" data-theme="g" data-icon="gear">
+                                <a class="themeChange"data-corners="false"href="#behaviour_points" data-transition="fade" data-theme="g" data-icon="gear">
                                     Behaviour Pts
                                 </a>
                             </li>
@@ -342,25 +344,25 @@
 
 
         <!--Timetable-->
-        <div data-theme="g" data-role="page" id="timetable">
+        <div data-theme="g" class="themeChange" data-role="page" id="timetable">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>TimeTable</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
                 
                 <center><h2><span id="name">Your</span> Timetable</h2></center>
 
-                <div data-theme="g" data-role="controlgroup" id="my-controlgroup"><!-- items will be injected here --></div>
+                <div data-theme="g" class="themeChange" data-role="controlgroup" id="my-controlgroup"><!-- items will be injected here --></div>
 
                 <table id="timetable">
 
@@ -405,8 +407,8 @@
 
                 </table>
 
-                <a data-corners="false"href="#weeka" data-role="button">Week A</a>
-                <a data-corners="false"href="#weekb" data-role="button">Week B</a>
+                <a class="themeChange"data-corners="false"href="#weeka" data-role="button">Week A</a>
+                <a class="themeChange"data-corners="false"href="#weekb" data-role="button">Week B</a>
                 <p>Hold your smartphone sideways to view the full timetable</p>
 
             </div>
@@ -415,19 +417,19 @@
 
         <!--Progress Review-->
 
-        <div data-theme="g" data-role="page" id="progress_review">
+        <div data-theme="g" class="themeChange" data-role="page" id="progress_review">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
                 <h3>Progress Review</h3>
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
 
                 <img class="fullscreen"src="img/coming.jpg">
             </div>
@@ -437,23 +439,23 @@
 
         <!--Exam Dates-->
 
-        <div data-theme="g" data-role="page" id="exam_dates">
+        <div data-theme="g" class="themeChange" data-role="page" id="exam_dates">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Exams</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
 
-                <div data-theme="g" data-role="collapsible" data-theme="g" data-content-theme="d" data-inset="false">
+                <div data-theme="g" class="themeChange" data-role="collapsible" data-theme="g" data-content-theme="d" data-inset="false">
                     <h3>English</h3>
                     <!--Dropdown menu-->
                             <p>Type:- <span id=""></span></p>
@@ -464,7 +466,7 @@
                     <!--/Dropdown Menu-->
                 </div><!-- /collapsible -->
 
-                <div data-theme="g" data-role="collapsible" data-theme="g" data-content-theme="d" data-inset="false">
+                <div data-theme="g" class="themeChange" data-role="collapsible" data-theme="g" data-content-theme="d" data-inset="false">
                     <h3>Maths</h3>
                     <p>Type:- <span id=""></span></p>
                             <p>Date:- <span id=""></span></p>
@@ -473,13 +475,13 @@
                             <p>Last Mock:- <span id=""></span></p>
                 </div><!-- /collapsible -->
 
-                <div data-theme="g" data-role="collapsible" data-theme="g" data-content-theme="d" data-inset="false">
+                <div data-theme="g" class="themeChange" data-role="collapsible" data-theme="g" data-content-theme="d" data-inset="false">
                     <h3>Science</h3>
                     <ul data-role="listview">
-                        <li><a data-corners="false"href="#">C1</a></li>
-                        <li><a data-corners="false"href="#">B2</a></li>
-                        <li><a data-corners="false"href="#">P3</a></li>
-                        <li><a data-corners="false"href="#">B1</a></li>
+                        <li><a class="themeChange"data-corners="false"href="#">C1</a></li>
+                        <li><a class="themeChange"data-corners="false"href="#">B2</a></li>
+                        <li><a class="themeChange"data-corners="false"href="#">P3</a></li>
+                        <li><a class="themeChange"data-corners="false"href="#">B1</a></li>
                     </ul>
                 </div><!-- /collapsible -->
             </div>
@@ -492,16 +494,16 @@
 
         <!--Settings-->
 
-        <div data-theme="g" data-role="page" id="settings">
+        <div data-theme="g" class="themeChange" data-role="page" id="settings">
 
-            <div data-theme="g" data-role="header" data-position="fixed" id="sheader">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed" id="sheader">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Settings</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
@@ -517,13 +519,13 @@
                 
                 <ul data-role="listview" data-split-icon="plus" data-theme="g" data-split-theme="g" data-inset="true">
 
-                    <li><a href="#">
+                    <li><a class="themeChange"href="#">
                         <h2>Red and Grey</h2>
-                        </a><a href="#" id="red"></a>
+                        </a><a class="themeChange"href="#" id="red"></a>
                     </li>
-                    <li><a href="#">
+                    <li><a class="themeChange"href="#">
                         <h2>Green and Grey</h2>
-                        </a><a href"#" id="green"></a>
+                        </a><a class="themeChange"href"#" id="green"></a>
                     </li>
                 </ul>
                 <p>More themes are on their way shortly!</p>
@@ -538,21 +540,21 @@
 
         <!--Template Blank-->
 
-        <div data-theme="g" data-role="page" id="??????">
+        <div data-theme="g" class="themeChange" data-role="page" id="??????">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Title</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
 
 
             </div>
@@ -563,21 +565,21 @@
 
         <!--Coming Soon!-->
 
-        <div data-theme="g" data-role="page" id="comingSoon">
+        <div data-theme="g" class="themeChange" data-role="page" id="comingSoon">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Coming Soon Test</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
 
                 <img class="fullscreen"src="img/coming.jpg">
             </div>
@@ -586,21 +588,21 @@
         
         <!--Attendance!-->
 
-        <div data-theme="g" data-role="page" id="attendence">
+        <div data-theme="g" class="themeChange" data-role="page" id="attendence">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Attendance</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
 
                 <img class="fullscreen"src="img/coming.jpg">
             </div>
@@ -608,57 +610,57 @@
 
         <!--Reward Points!-->
 
-        <div data-theme="g" data-role="page" id="reward_points">
+        <div data-theme="g" class="themeChange" data-role="page" id="reward_points">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Reward Points</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
                 <img class="fullscreen"src="img/coming.jpg">
             </div>
         </div>
 
         <!--Behaviour Points!-->
 
-        <div data-theme="g" data-role="page" id="behaviour_points">
+        <div data-theme="g" class="themeChange" data-role="page" id="behaviour_points">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
-                <a data-corners="false"data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#profile" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
                 <h3>Behaviour Points</h3>
 
-                <a data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
                 </a>
             </div>
 
-            <div data-theme="g" data-role="content">
+            <div data-theme="g" class="themeChange" data-role="content">
                 <img class="fullscreen"src="img/coming.jpg">
             </div>
         </div>
 
 
         <!--Login Error (Popup)-Try making this popup red in theme. -->
-        <div data-theme="g" data-role="page" id="error">
+        <div data-theme="g" class="themeChange" data-role="page" id="error">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
                 <h3>
                     Oops! Something went wrong.
                 </h3>
             </div>
 
-            <div data-theme="g" data-role="content" >
+            <div data-theme="g" class="themeChange" data-role="content" >
                 <!--List view here-->
                 <p>Your Username or Password was incorrect!</p>
                 <!--Error Image LOL--><center><img src="img/oops2.gif"></center>
@@ -668,19 +670,19 @@
 
 
         <!--Notes System(Popup)-->
-        <div data-theme="g" data-role="page" id="notes">
+        <div data-theme="g" class="themeChange" data-role="page" id="notes">
 
-            <div data-theme="g" data-role="header" data-position="fixed">
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
                 <h3>
                     Just Notes.
                 </h3>
             </div>
 
-            <div data-theme="g" data-role="content" >
+            <div data-theme="g" class="themeChange" data-role="content" >
                 <!--List view here-->
                 <p>Make Notes here...</p>
                 <input name="newnote" id="newnote" placeholder="Type your note here" value="" type="text" data-mini="true"/>
-                <input type="submit" onclick="submitNote()" data-inline="true" data-theme="g" value="Submit"/>
+                <input class="themeChange" type="submit" onclick="submitNote()" data-inline="true" data-theme="g" value="Submit"/>
             </div>
 
         </div>
