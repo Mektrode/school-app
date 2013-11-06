@@ -31,10 +31,37 @@ $("#green").click(function() {
 $("#red").click(function() {
     $('.themeChange').attr('data-theme', 'r').removeClass('ui-body-g').addClass('ui-body-r').trigger('create');
 });
-
-
-
 /* EMD THEMES*/
+
+
+/*FOOTER SYSTEM FOR ALL PAGES*/
+
+$('#footer').append("
+            <div data-theme="g" class="themeChange" data-role="footer">
+
+                    <div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top">
+                        <ul>
+                            <li>
+                                <a class="themeChange"data-corners="false"href="#about" data-transition="slideup" data-theme="g" data-icon="info">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a class="themeChange"data-corners="false"href="#home" data-transition="flip" data-theme="g" data-icon="home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="themeChange"data-corners="false"href="#settings" data-transition="slidedown" data-theme="g" data-icon="gear">
+                                    Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>"
+);
+
+
 
 
 //NOTES SYSTEM!!!!

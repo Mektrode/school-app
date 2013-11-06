@@ -337,3 +337,26 @@
 	font-family: 'Della Respira', Arial, sans-serif /*{global-font-family}*/;
 	text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*shelf*/
+.ui-body-s,
+.ui-overlay-s {
+	background: 			url('img/wood/Shelves4.jpg'); /*{r-body-background-image (shelf) }*/;
+	color: 					#fff /*{r-body-color}*/;
+	text-shadow: 0 /*{r-body-shadow-x}*/ 1px /*{r-body-shadow-y}*/ 0 /*{r-body-shadow-radius}*/ #111 /*{r-body-shadow-color}*/;
+	font-weight: normal;
+}
+.ui-overlay-s {
+	background-image: none;
+	border-width: 0;
+}

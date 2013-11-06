@@ -181,15 +181,15 @@
                         <a class="themeChange"data-corners="false"href="#profile" data-role="button" data-icon="info"data-transition="flow">Profile</a>
                         <a class="themeChange"data-corners="false"href="#timetable" data-role="button" data-direction="reverse" data-icon="info"data-transition="flip">Timetable</a>
 
-                        <a class="themeChange"data-corners="false"data-role="button" href="#error" data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-theme="g">Error Test</a>
-
                         <a class="themeChange"data-corners="false"href="#exam_dates" data-transition="turn" data-role="button" data-icon="info"data-theme="g">Exam Dates</a>
+
+                        <a class="themeChange"data-corners="false"data-role="button" href="#games" data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-theme="g">Games</a>
+
+                        <a class="themeChange"data-corners="false"href="#revision" data-transition="turn" data-role="button" data-icon="info"data-theme="g">Revision Corner</a>
 
                         <a class="themeChange"data-corners="false"href="#progress_review" data-transition="slideup" data-role="button" data-icon="info"data-theme="g">Progress Review</a>
 
-                        <a class="themeChange"data-corners="false"data-role="button" href="#comingSoon" data-theme="g" data-icon="info">Coming Soon Test</a>
-
-                        <a class="themeChange"data-corners="false"data-role="button" href="#" data-theme="g" data-icon="info">Extra</a>
+                        <a class="themeChange"data-corners="false"data-role="button" href="#error" data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-theme="g">Error Test</a>
 
                         <input class="themeChange" type="submit" onclick="buildIt()" data-inline="true" data-theme="g" value="Load Data" />
 
@@ -197,18 +197,21 @@
 
 
             </div>
+
+
+            <!--inject this footer into all pages using js!-->
             <div data-theme="g" class="themeChange" data-role="footer">
 
                     <div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top">
                         <ul>
                             <li>
-                                <a class="themeChange"data-corners="false"href="#timetable" data-transition="flow" data-theme="g" data-icon="star">
-                                    Timetable
+                                <a class="themeChange"data-corners="false"href="#about" data-transition="slideup" data-theme="g" data-icon="info">
+                                    About
                                 </a>
                             </li>
                             <li>
-                                <a class="themeChange"data-corners="false"href="#profile" data-transition="flip" data-theme="g" data-icon="grid">
-                                    Profile
+                                <a class="themeChange"data-corners="false"href="#home" data-transition="flip" data-theme="g" data-icon="home">
+                                    Home
                                 </a>
                             </li>
                             <li>
@@ -261,19 +264,9 @@
 
                 <!--Right Panel-->
 
-                <div data-role="panel" id="library" data-display="reveal" data-position="right">
+                <div data-role="panel" id="library" class="fullscreen" data-display="reveal" data-position="right"style="background: url('img/wood/shelves4.jpg') no-repeat !important; width:100%; height:100%;">
                     <center>
                         <h2>Library</h2>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
-                        <p>Right push panel.</p>
-                        <hr>
                     </center>
                 </div>
 
@@ -410,8 +403,8 @@
                 <a class="themeChange"data-corners="false"href="#weeka" data-role="button">Week A</a>
                 <a class="themeChange"data-corners="false"href="#weekb" data-role="button">Week B</a>
                 <p>Hold your smartphone sideways to view the full timetable</p>
-
             </div>
+
 
         </div>
 
@@ -529,8 +522,12 @@
                     </li>
                 </ul>
                 <p>More themes are on their way shortly!</p>
-
             </div>
+
+
+            <div id="footer"></div>
+            
+            <!--inject this footer into all pages using js!-->
 
         </div>
 
@@ -563,16 +560,16 @@
 
         
 
-        <!--Coming Soon!-->
+        <!--Games Page (makeBlue)-->
 
-        <div data-theme="g" class="themeChange" data-role="page" id="comingSoon">
+        <div data-theme="g" class="themeChange" data-role="page" id="games">
 
             <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
                 <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
                     Back
                 </a>
 
-                <h3>Coming Soon Test</h3>
+                <h3>Games</h3>
 
                 <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
                     Notes
@@ -581,9 +578,59 @@
 
             <div data-theme="g" class="themeChange" data-role="content">
 
-                <img class="fullscreen"src="img/coming.jpg">
+
             </div>
+
         </div>
+
+
+        <!--About Page-->
+
+        <div data-theme="g" class="themeChange" data-role="page" id="about">
+
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>About</h3>
+
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-theme="g" class="themeChange" data-role="content">
+
+
+            </div>
+
+        </div>
+
+
+        <!--Revision-->
+
+        <div data-theme="g" class="themeChange" data-role="page" id="revision">
+
+            <div data-theme="g" class="themeChange" data-role="header" data-position="fixed">
+                <a class="themeChange"data-corners="false"data-role="button" data-direction="reverse" href="#home" data-icon="back" data-iconpos="left" class="ui-btn-left">
+                    Back
+                </a>
+
+                <h3>Revision</h3>
+
+                <a class="themeChange"data-corners="false"data-role="button" href="#notes"data-direction="reverse" data-rel="dialog" data-transition="pop" data-icon="star" data-corners="false" data-iconpos="left" class="ui-btn-right">
+                    Notes
+                </a>
+            </div>
+
+            <div data-theme="g" class="themeChange" data-role="content">
+
+
+            </div>
+
+        </div>
+
 
         
         <!--Attendance!-->
@@ -651,6 +698,9 @@
         </div>
 
 
+
+
+
         <!--Login Error (Popup)-Try making this popup red in theme. -->
         <div data-theme="g" class="themeChange" data-role="page" id="error">
 
@@ -689,10 +739,10 @@
 
 
         <!--TODO!-->
-        <!--Help!: Make new help system with small swatches pointing to objects and saying what they are. the fade in out and only appear on first use
+        <!--Help!: Make new help system with small swatches pointing to objects and saying what they are. the fade in out and only appear on first use(animations)
 
 
-            dsfsdf-->
+        -->
 
 
 
