@@ -34,9 +34,26 @@ $("#red").click(function() {
 /* EMD THEMES*/
 
 
-/*FOOTER SYSTEM FOR ALL PAGES*/
+/* ***********************
 
-$('#footer').append("
+FOOTER SYSTEM FOR ALL PAGES
+
+****************************/
+
+/*array*/
+
+var footer = new Array;
+
+footer.push('<div data-theme="g" class="themeChange" data-role="footer">');
+footer.push('<div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top"><ul><li>');
+footer.push('<a class="themeChange"data-corners="false"href="#about" data-transition="slideup" data-theme="g" data-icon="info">About</a></li>');
+footer.push('<li><a class="themeChange"data-corners="false"href="#home" data-transition="flip" data-theme="g" data-icon="home">Home</a></li>');
+footer.push('<li><a class="themeChange"data-corners="false"href="#settings" data-transition="slidedown" data-theme="g" data-icon="gear">Settings</a></li>');
+footer.push('</ul></div></div>');
+
+
+
+/*
             <div data-theme="g" class="themeChange" data-role="footer">
 
                     <div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top">
@@ -58,10 +75,10 @@ $('#footer').append("
                             </li>
                         </ul>
                     </div>
-            </div>"
-);
-
-
+            </div>
+*/
+/* put \ to stop string undeteremined bug*/
+$('#footer').append(footer.join(''));
 
 
 //NOTES SYSTEM!!!!
