@@ -78,7 +78,7 @@ footer.push('</ul></div></div>');
             </div>
 */
 /* put \ to stop string undeteremined bug*/
-$('#footer').append(footer.join(''));
+$('.footer').append(footer.join(''));
 
 
 //NOTES SYSTEM!!!!
