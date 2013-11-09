@@ -44,7 +44,7 @@ FOOTER SYSTEM FOR ALL PAGES
 
 var footer = new Array;
 
-footer.push('<div data-theme="g" class="themeChange" data-role="footer">');
+footer.push('<div data-theme="g" class="themeChange" data-role="footer" data-position="fixed">');
 footer.push('<div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top"><ul><li>');
 footer.push('<a class="themeChange"data-corners="false"href="#about" data-transition="slideup" data-theme="g" data-icon="info">About</a></li>');
 footer.push('<li><a class="themeChange"data-corners="false"href="#home" data-transition="flip" data-theme="g" data-icon="home">Home</a></li>');
