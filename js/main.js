@@ -52,48 +52,69 @@ footer.push('<li><a class="themeChange"data-corners="false"href="#settings" data
 footer.push('</ul></div></div>');
 
 
-
-/*
-            <div data-theme="g" class="themeChange" data-role="footer">
-
-                    <div data-theme="g" class="themeChange" data-role="navbar" data-iconpos="top">
-                        <ul>
-                            <li>
-                                <a class="themeChange"data-corners="false"href="#about" data-transition="slideup" data-theme="g" data-icon="info">
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a class="themeChange"data-corners="false"href="#home" data-transition="flip" data-theme="g" data-icon="home">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a class="themeChange"data-corners="false"href="#settings" data-transition="slidedown" data-theme="g" data-icon="gear">
-                                    Settings
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
-*/
 /* put \ to stop string undeteremined bug*/
 $('.footer').append(footer.join(''));
 
 
+
+
+
 //NOTES SYSTEM!!!!
-/*
-var note;
+
+var noteList = new Array; 
 
 
 function submitNote () {
-    var new_note = ;
+
+    var d = new Date();
+
+    var day = d.getDay();
+    var month = d.getMonth();
+    var year = d.getFullYear();   
+    var date = day + "/" + month + "/" + year;
+
+    var hour = d.getHours();
+    var minutes = d.getMinutes();
+    var time = hour + ":" + minutes;
+
+    var note = $("#newnote").String;
+
 
     //use advanced methods to add notes like in trolley list in cc
+
+    var note = {
+        time : time,
+        date : date,
+        note : note
+    }
+
+    noteList.push(note);
+
+    if (noteList.length <= 0) {
+        createNote();
+    }
+    else {
+        alert("Error");
+    }
 }
-*/
+
+function createList () {
+
+    $("#displayNote").append("<p>BAKSDBSABDUIBSFA</p>");
+
+    for (var i = noteList.length - 1; i >= 0; i--) {
+        noteList[i]
+    };
+
+    for (var i = 0; i < noteList.length; i++) {
+        noteList[i]
+    };
+}
 
 /*
+
+EXAMPLE JSON
+
 var another = {
     "firstName": "John",
     "lastName": "Smith",

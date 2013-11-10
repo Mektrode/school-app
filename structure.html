@@ -639,9 +639,30 @@
             <div data-role="content" >
                 <!--List view here-->
                 <p>Make Notes here...</p>
+
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Notes <span class="count">3</span></li>
+
+                    <li>
+                        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                        <p class="time"><strong>6:24</strong>PM</p>
+                    </li>
+
+                    <li>
+                        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                        <p class="time"><strong>9:18</strong>AM</p>
+                    </li>
+
+                    <li>
+                        <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+                        <p class="time"><strong>4:48</strong>PM</p>
+                    </li>
+
+                </ul>
+
+                <div id="displayNote"></div>
                 <input name="newnote" id="newnote" placeholder="Type your note here" value="" type="text" data-mini="true"/>
-                <input type="submit" onclick="submitNote()" data-inline="true" data-theme="a" value="Submit"/>
-            </div>
+                <input class="themeChange" type="submit" onclick="submitNote()" data-inline="true" data-theme="g" value="Submit"/>
 
         </div>
 
