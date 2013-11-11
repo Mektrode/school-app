@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Testing new UI</title>
+
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+		<script src="js/vendor/hammer.min.js"></script>
+
+
+		<script type="text/javascript">
+			$(function(){
+			    var blue = document.getElementById("blue");
+			    
+			    Hammer(blue).on("swipeleft", function() {
+			          $(blue).animate({left: "-=100"}, 500)  
+			    });
+			    
+			    Hammer(document.getElementById("blue")).on("swiperight", function() {
+			          $(blue).animate({left: "+=100"}, 500)  
+			    });
+			})
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+		    <div id="grey"><img src="http://images3.wikia.nocookie.net/__cb20101022222308/gardener/images/2/29/Tick.png" id="img"/><img src="http://e08595.medialib.glogster.com/media/a2/a2750d7f22389dae95d30b9b27314d007b36370a086ea77400e03a4dee74ebfa/red-x-png.png" id="img2"/></div>
+		    
+		    <div id="blue"></div>
+		</div>
+
+	</body>
+
+</html>
+
+<style type="text/css">
+
+* {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.container {
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+}
+
+#grey {
+    position: absolute;
+	margin-top:20%;
+    margin-left:15%;
+	width:70%;
+    height:70px;
+	background-color:white;
+	cursor:pointer;
+}
+
+
+#blue {
+    position: relative;
+	margin-top:20%;
+    margin-left:15%;
+	width:70%;
+    height:70px;
+	background-color: #1A302F;
+	cursor:pointer;
+    box-shadow: 3px 5px 1px #777777;
+}
+
+
+#img {
+    width: 45px;
+    height: 40px;
+    padding-top: 7%;
+    padding-left: 10%;
+    padding-right: 43%;
+    float: left;
+
+}
+
+#img2 {
+    width: 45px;
+    height: 40px;
+    padding-top: 7%;
+    float: left;
+}
+
+</style>
